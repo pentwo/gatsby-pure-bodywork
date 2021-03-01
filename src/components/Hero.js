@@ -85,7 +85,9 @@ const PageHeroStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  h2 {
+    text-shadow: 0 0 3px var(--error);
+  }
   @media (max-width: 640px) {
     min-height: 20vh;
   }

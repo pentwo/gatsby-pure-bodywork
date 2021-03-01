@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import Hero from '../components/Hero'
 import { Treatments } from '../components/Treatments'
-import { About } from '../components/About'
+import { Team } from '../components/Team'
 import { Testimonies } from '../components/Testimonies'
 import Location from '../components/Location'
 import SEO from '../components/SEO'
@@ -15,7 +15,7 @@ const IndexPage = () => {
         <SEO title="Home"></SEO>
         <Hero />
         <Treatments />
-        <About />
+        <Team />
         <Testimonies />
         <Location />
       </main>

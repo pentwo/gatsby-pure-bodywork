@@ -33,6 +33,9 @@ const HeaderStyles = styled.header`
       justify-content: center;
       text-decoration: none;
     }
+    h1 {
+      text-shadow: 0 0 3px var(--error);
+    }
     img {
       margin-inline-end: 1rem;
     }
@@ -45,7 +48,7 @@ const HeaderStyles = styled.header`
     background: var(--white);
     border-bottom: 2px solid MediumPurple;
     a:hover {
-      color: var(--dark);
+      color: var(--purple);
     }
   }
   @media (max-width: 640px) {

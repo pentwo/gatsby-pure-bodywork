@@ -2,13 +2,13 @@ import React from 'react'
 import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
-export default function AboutPage() {
+export default function TeamPage() {
   return (
     <>
       <main>
-        <SEO title="About"></SEO>
+        <SEO title="Our Team"></SEO>
 
-        <PageHero title="About" />
+        <PageHero title="Our Team" />
       </main>
     </>
   )

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Avatar from '../images/avatar.jpg'
 
-const AboutStyles = styled.section`
+const TeamStyles = styled.section`
   /* padding: 3rem 10vw; */
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -36,9 +36,9 @@ const AboutStyles = styled.section`
   }
 `
 
-export const About = () => {
+export const Team = () => {
   return (
-    <AboutStyles>
+    <TeamStyles>
       <h3 className="center">About Me</h3>
       <div className="wrapper">
         <img src={Avatar} alt="" />
@@ -52,7 +52,7 @@ export const About = () => {
           </p>
         </article>
       </div>
-    </AboutStyles>
+    </TeamStyles>
   )
 }
 

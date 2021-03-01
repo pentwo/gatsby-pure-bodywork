@@ -153,9 +153,9 @@ export default Nav
 const navLinks = [
   {
     id: 1,
-    title: 'About',
+    title: 'Our Team',
     icon: <GiLotus />,
-    link: '/about',
+    link: '/team',
   },
   {
     id: 2,
