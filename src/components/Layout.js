@@ -6,6 +6,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import { IconContext } from 'react-icons'
 
 import Header from './Header'
+import Nav from './Nav'
 import Footer from './Footer'
 
 import GlobalStyles from '../styles/GlobalStyles'
@@ -18,6 +19,7 @@ export default function Layout({ children }) {
         <GlobalStyles />
         <Typography />
         <Header />
+
         {children}
         <Footer />
       </IconContext.Provider>

@@ -1,25 +1,32 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+${'' /* *{
+  outline: red solid 1px;
+} */}
   :root {
     ${'' /* https://www.color-hex.com/color/5d4037 */}
-    --primary: #5d4037;
-    --dark: #372621;
-    --light: #9d8c87;
-    --purple: #40375d;
+    ${'' /* https://www.color-hex.com/color/9fc8a9 */}
+    --primary: #9fc8a9;
+    --dark: #5f7865;
+    --light: #cfe3d4;
+    --purple: #a99fc8;
 
-    --primary-opacity: #5d4037BF;
-    --light-opacity: #9d8c87BF;
-    --purple-opacity: #40375dBF;
+    --primary-opacity: #9fc8a9BF;
+    --light-opacity: #cfe3d4BF;
+    --purple-opacity: #a99fc8BF;
 
-    --warning: #5d5337;
-    --success: #375d40;
-    --error: #5d3741;
+    --warning: #c8a99f;
+    --success: #aac89f;
+    --error: #c89fbe;
     --black: #131313;
     --white: #eee;
     --grey: #ded8d7;
 
-    --smScreen: '640px'
+    --smScreen: '640px';
+
+    --gradient-primary: rgba(225, 225, 225, 0.7);
+    --gradient-secondary: rgba(225, 225, 225, 0.5);
   }
   html {
     ${'' /* background-image: url(${bg}); */}
@@ -31,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background: var(--white);
   }
 
@@ -67,13 +74,13 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--error) var(--white);
+    scrollbar-color: var(--primary) var(--white);
   }
   body::-webkit-scrollbar-track {
     background: var(--white);
   }
   body::-webkit-scrollbar-thumb {
-    background-color: var(--error) ;
+    background-color: var(--primary) ;
     border-radius: 6px;
     border: 3px solid var(--white);
   }

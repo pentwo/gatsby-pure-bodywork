@@ -5,58 +5,55 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 
 // import ResponsiveMenu from './ResponsiveMenu'
 import Nav from './Nav'
-import logo from '../images/favicon/favicon-32x32.png'
+import logo from '../images/logo.png'
 
 const HeaderStyles = styled.header`
-  background: transparent;
-  position: fixed;
-
+  padding: 2rem 0;
+  background: var(--white);
   width: 100%;
-  z-index: 99;
+  position: fixed;
+  z-index: 999;
 
   transition: all 0.4s linear;
 
   .wrapper {
     max-width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 0 3rem;
   }
 
   .logo {
+    width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
-    h1 {
-      text-shadow: 0 0 3px var(--error);
-    }
     img {
       margin-inline-end: 1rem;
+      width: 100px;
+      transition: all 0.4s linear;
+      margin-bottom: 2rem;
     }
-  }
-  h1 {
-    font-size: 3rem;
   }
 
   &.active {
-    background: var(--white);
-    border-bottom: 2px solid MediumPurple;
+    /* background: var(--white); */
+
     a:hover {
-      color: var(--purple);
+      /* color: var(--purple); */
+    }
+    img {
+      /* transform: scale(0.8); */
     }
   }
   @media (max-width: 640px) {
     /* width: calc(100vw - 3rem); */
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    border-bottom: 2px solid MediumPurple;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    /* border-bottom: 2px solid MediumPurple; */
   }
 `
 
@@ -109,7 +106,7 @@ export default function Header(props) {
           <div className="logo">
             <Link to="/">
               <img className="" src={logo} alt="logo" />
-              <h1>Pure Bodywork</h1>
+              {/* <h1>Pure Bodywork</h1> */}
             </Link>
           </div>
           <Nav />

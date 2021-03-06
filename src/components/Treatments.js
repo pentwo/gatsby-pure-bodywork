@@ -5,6 +5,11 @@ import pregnancyIcon from '../images/icons/icons8-pregnant-100.png'
 import deepTissueIcon from '../images/icons/icons8-acupressure-100.png'
 import aromatherapyIcon from '../images/icons/icons8-oil-massage-100.png'
 
+import remedialBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
+import pregnancyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
+import aromatherapyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
+import { Link } from 'gatsby'
+
 const TreatmentsStyles = styled.section`
   display: flex;
   flex-direction: column;
@@ -13,24 +18,17 @@ const TreatmentsStyles = styled.section`
   min-height: 25vh;
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 5rem;
+    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+    gap: 3rem;
   }
-  .card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--grey);
-    padding: 2rem;
-    border-radius: 1rem;
-  }
+
   .shadow-drop-2-center:hover {
     animation: shadow-drop-2-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
   }
-  @media (max-width: 640px) {
+  @media (max-width: var(--smScreen)) {
     .wrapper {
-      grid-template-columns: 1fr;
+      /* grid-template-columns: 1fr; */
     }
   }
 
@@ -57,6 +55,49 @@ const TreatmentsStyles = styled.section`
     }
   }
 `
+
+const CardStyles = styled.div`
+  height: 20rem;
+  /* min-width: 25rem; */
+  border-radius: 1rem;
+
+  overflow: hidden;
+  position: relative;
+
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover .inner-card,
+  &:hover .inner-card {
+    transform: scale(1.2);
+  }
+
+  .inner-card {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(
+        to right,
+        var(--gradient-primary),
+        var(--gradient-secondary)
+      ),
+      ${props => `url(${props.bg})`};
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: all 0.5s;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  h4 {
+    margin-bottom: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+`
+
 export const Treatments = () => {
   return (
     <TreatmentsStyles>
@@ -64,17 +105,17 @@ export const Treatments = () => {
       <div className="wrapper">
         {data.map((item, index) => {
           return (
-            <div
+            <CardStyles
               className="card shadow-drop-2-center"
               key={`${item.name}-${index}`}
+              bg={`${item.background}`}
             >
-              <img
-                src={item.icon}
-                alt={item.name}
-                style={{ width: '50px', marginRight: '2rem' }}
-              />
-              <h4>{item.name}</h4>
-            </div>
+              <Link to="/treatments">
+                <div className="inner-card">
+                  <h4>{item.name}</h4>
+                </div>
+              </Link>
+            </CardStyles>
           )
         })}
       </div>
@@ -86,19 +127,22 @@ const data = [
   {
     name: 'Remedial Massage',
     icon: `${remedialIcon}`,
+    background: `${remedialBg}`,
   },
   {
     name: 'Pregnancy Massage',
     icon: `${pregnancyIcon}`,
-  },
-  {
-    name: 'Deep Tissue Massage',
-    icon: `${deepTissueIcon}`,
+    background: `${pregnancyBg}`,
   },
   {
     name: 'Aromatherapy Massage',
     icon: `${aromatherapyIcon}`,
+    background: `${aromatherapyBg}`,
   },
+  // {
+  //   name: 'Deep Tissue Massage',
+  //   icon: `${deepTissueIcon}`,
+  // },
   // {
   //   name: 'Relaxation Massage',
   // },
@@ -109,3 +153,5 @@ const data = [
   //   name: 'Tibetan Singing Bowl Therapy Sounds Massage',
   // },
 ]
+
+// Photo by RODNAE Productions from Pexels

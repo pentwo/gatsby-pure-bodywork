@@ -5,9 +5,9 @@ import bg from '../images/background/pexels-anete-lusina-5240643.jpg'
 
 const LocationStyles = styled.section`
   background-image: linear-gradient(
-      to left,
-      var(--primary-opacity),
-      var(--light-opacity)
+      to right,
+      var(--gradient-primary),
+      var(--gradient-secondary)
     ),
     url(${bg});
   background-position: center center;

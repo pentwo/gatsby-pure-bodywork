@@ -9,14 +9,9 @@ import { ImPriceTag } from 'react-icons/im'
 import { RiContactsBook2Fill } from 'react-icons/ri'
 
 const NavStyles = styled.nav`
-  /* width: 100%; */
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   justify-content: center;
-
-  /* padding: 0px 3rem; */
-  height: 80px;
 
   ul.nav-options {
     width: 100%;
@@ -60,11 +55,11 @@ const NavStyles = styled.nav`
       transition: all 0.5s ease-in-out;
 
       opacity: 0;
-      background-color: var(--purple);
+      background-color: var(--primary);
     }
     &:hover {
       cursor: pointer;
-      color: var(--white);
+
       &:before,
       &:after {
         width: 100%;
@@ -74,17 +69,14 @@ const NavStyles = styled.nav`
   }
 
   @media (max-width: 640px) {
-    /*Mobile View */
-    justify-content: flex-end;
+    justify-content: center;
 
     ul.nav-options {
-      /* display: flex; */
       grid-template-columns: repeat(1, auto);
       grid-template-rows: repeat(4, auto);
 
-      /* height: 350px; */
       position: absolute;
-      top: 80px;
+      top: 225px;
       left: -100%;
       opacity: 0;
       transition: all 0.5s ease;
@@ -109,7 +101,6 @@ const NavStyles = styled.nav`
     }
 
     .option {
-      /* height: 10vw; */
     }
     .mobile-menu {
       display: block;

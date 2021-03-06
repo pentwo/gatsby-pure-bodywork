@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 const Typography = createGlobalStyle`
-${
-  '' /* @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Sofia&family=Pacifico&display=swap'); */
-}
-
   html {
     font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: var(--black);
@@ -16,13 +12,27 @@ ${
     line-height: 1.5;
   }
   h1,h2,h3,h4,h5,h6 {
-    font-family: 'Sofia', cursive;
+    font-family: 'Josefin Sans', sans-serif;
     font-weight: normal;
+    letter-spacing: 1.5;
     margin: 0;
+    text-transform: capitalize;
   }
 
+  h2{
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
   h3{
     font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  h4{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  h5{
+    font-size: 2.25rem;
     margin-bottom: 2rem;
   }
   a {

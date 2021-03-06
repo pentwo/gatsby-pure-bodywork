@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Avatar from '../images/avatar.jpg'
+import monicaAvatar from '../images/avatar.jpg'
 
 const TeamStyles = styled.section`
   /* padding: 3rem 10vw; */
@@ -15,16 +15,20 @@ const TeamStyles = styled.section`
   background-color: var(--light);
   .wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fill, minmax(min(35rem, 100%), 1fr));
     align-items: center;
     justify-content: center;
     gap: 5rem;
   }
 
+  .member {
+    text-align: center;
+  }
   article {
   }
   img {
     border-radius: 5000px;
+    margin-bottom: 2rem;
   }
   @media (max-width: 640px) {
     .wrapper {
@@ -39,18 +43,17 @@ const TeamStyles = styled.section`
 export const Team = () => {
   return (
     <TeamStyles>
-      <h3 className="center">About Me</h3>
+      <h3 className="center">About Us</h3>
       <div className="wrapper">
-        <img src={Avatar} alt="" />
-        <article>
-          <p>
-            I am passionate about helping others to improve their well-being by
-            offering relaxing and rejuvenating treatments that nurture the self
-            and lead to long term health solutions. I believe in practicing
-            holistically and focusing on both your physical and emotional needs,
-            establishing a balance between the mind and body.
-          </p>
-        </article>
+        {members.map(member => (
+          <div className="member">
+            <img src={member.avatarImage} alt="" />
+            <h3>{member.name}</h3>
+            <article>
+              <p>{member.description}</p>
+            </article>
+          </div>
+        ))}
       </div>
     </TeamStyles>
   )
@@ -82,3 +85,12 @@ export const Team = () => {
   of themselves.
 </p>
 */
+
+const members = [
+  {
+    name: 'Monica',
+    avatarImage: monicaAvatar,
+    description:
+      'I am passionate about helping others to improve their well-being by offering relaxing and rejuvenating treatments that nurture the self and lead to long term health solutions. I believe in practicing holistically and focusing on both your physical and emotional needs, establishing a balance between the mind and body.',
+  },
+]
