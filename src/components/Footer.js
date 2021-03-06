@@ -27,6 +27,21 @@ const FooterStyles = styled.div`
   .copyrights {
     grid-column: span 2;
   }
+  .phone,
+  .email {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    a {
+      text-decoration: none;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      margin-right: 1rem;
+    }
+  }
+
   @media (max-width: 640px) {
     grid-template-columns: 1fr;
     .hours {
@@ -58,10 +73,10 @@ export default function Footer() {
 
       <div className="contact">
         <h5>Contact</h5>
-        <phone>
+        <div className="phone">
           <AiFillPhone />
-          (08) 9221 1188
-        </phone>
+          <a href="tel:+61892211188">(08) 9221 1188</a>
+        </div>
         <div className="email">
           <AiFillMail />
 

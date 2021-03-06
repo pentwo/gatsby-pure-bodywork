@@ -1,14 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import remedialIcon from '../images/icons/icons8-massage-100.png'
-import pregnancyIcon from '../images/icons/icons8-pregnant-100.png'
-import deepTissueIcon from '../images/icons/icons8-acupressure-100.png'
-import aromatherapyIcon from '../images/icons/icons8-oil-massage-100.png'
+import { Link } from 'gatsby'
 
 import remedialBg from '../images/background/pexels-anete-lusina-5240643.jpg'
 import pregnancyBg from '../images/treatments/pexels-leah-kelley-618923.jpg'
 import aromatherapyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
-import { Link } from 'gatsby'
 
 const TreatmentsStyles = styled.section`
   display: flex;
@@ -18,7 +14,7 @@ const TreatmentsStyles = styled.section`
   min-height: 25vh;
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
     gap: 3rem;
   }
 
@@ -26,9 +22,9 @@ const TreatmentsStyles = styled.section`
     animation: shadow-drop-2-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
       both;
   }
-  @media (max-width: var(--smScreen)) {
+  @media (max-width: 640px) {
     .wrapper {
-      /* grid-template-columns: 1fr; */
+      grid-template-columns: minmax(35rem, 1fr);
     }
   }
 
@@ -106,7 +102,7 @@ export const Treatments = () => {
         {data.map((item, index) => {
           return (
             <CardStyles
-              className="card shadow-drop-2-center"
+              className="card shadow-drop-2-center center"
               key={`${item.name}-${index}`}
               bg={`${item.background}`}
             >
@@ -126,17 +122,14 @@ export const Treatments = () => {
 const data = [
   {
     name: 'Remedial Massage',
-    icon: `${remedialIcon}`,
     background: `${remedialBg}`,
   },
   {
     name: 'Pregnancy Massage',
-    icon: `${pregnancyIcon}`,
     background: `${pregnancyBg}`,
   },
   {
     name: 'Aromatherapy Massage',
-    icon: `${aromatherapyIcon}`,
     background: `${aromatherapyBg}`,
   },
   // {

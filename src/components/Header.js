@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Img } from 'gatsby-image'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
+import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
 // import ResponsiveMenu from './ResponsiveMenu'
 import Nav from './Nav'
 import logo from '../images/logo.png'
@@ -21,39 +22,36 @@ const HeaderStyles = styled.header`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding: 0;
   }
 
   .logo {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+
     justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
     img {
-      margin-inline-end: 1rem;
       width: 100px;
       transition: all 0.4s linear;
-      margin-bottom: 2rem;
+    }
+    position: relative;
+  }
+  .social-icons {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    svg {
+      width: 24px;
+      height: 24px;
     }
   }
 
-  &.active {
-    /* background: var(--white); */
-
-    a:hover {
-      /* color: var(--purple); */
-    }
-    img {
-      /* transform: scale(0.8); */
-    }
-  }
   @media (max-width: 640px) {
-    /* width: calc(100vw - 3rem); */
-    width: 100%;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    /* border-bottom: 2px solid MediumPurple; */
+    .logo img {
+      margin: 0;
+    }
   }
 `
 
@@ -106,8 +104,24 @@ export default function Header(props) {
           <div className="logo">
             <Link to="/">
               <img className="" src={logo} alt="logo" />
-              {/* <h1>Pure Bodywork</h1> */}
             </Link>
+            <div className="social-icons">
+              <a
+                href="https://www.facebook.com/purebodywork.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <AiFillFacebook />
+              </a>
+
+              <a
+                href="https://www.instagram.com/purebodywork.au/"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <AiFillInstagram />
+              </a>
+            </div>
           </div>
           <Nav />
         </div>

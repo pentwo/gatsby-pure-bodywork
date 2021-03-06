@@ -76,7 +76,8 @@ const NavStyles = styled.nav`
       grid-template-rows: repeat(4, auto);
 
       position: absolute;
-      top: 225px;
+      top: 0;
+      height: 100vh;
       left: -100%;
       opacity: 0;
       transition: all 0.5s ease;
@@ -84,7 +85,7 @@ const NavStyles = styled.nav`
       grid-gap: 0px;
     }
     ul.nav-options.active {
-      background: var(--purple);
+      background: var(--primary);
 
       left: 0;
       opacity: 1;
@@ -94,7 +95,7 @@ const NavStyles = styled.nav`
       padding-left: 0px;
     }
     a {
-      color: var(--white);
+      font-size: 2rem;
       width: 100%;
       text-align: center;
       padding: 3rem 0px;
@@ -103,7 +104,11 @@ const NavStyles = styled.nav`
     .option {
     }
     .mobile-menu {
+      z-index: 999;
       display: block;
+      position: absolute;
+      right: 2rem;
+      top: 2rem;
     }
   }
 `
@@ -128,13 +133,13 @@ const Nav = () => {
         ))}
       </ul>
 
-      <div className="mobile-menu" onClick={handleClick}>
+      <button className="mobile-menu" onClick={handleClick}>
         {active ? (
           <MdClose className="menu-icon" />
         ) : (
           <FaBars className="menu-icon" />
         )}
-      </div>
+      </button>
     </NavStyles>
   )
 }
