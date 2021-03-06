@@ -14,6 +14,13 @@ const FooterStyles = styled.div`
   align-items: center;
   font-size: 1.5rem;
 
+  ul {
+    list-style: none;
+  }
+  li {
+    margin-bottom: 0.5rem;
+  }
+
   .hours {
     grid-row: 1/3;
   }
@@ -25,7 +32,7 @@ const FooterStyles = styled.div`
     .hours {
       grid-row: 1/2;
     }
-    copyrights {
+    .copyrights {
       grid-column: 1;
     }
   }
@@ -37,8 +44,10 @@ export default function Footer() {
       <div className="hours">
         <h5>Business Hours</h5>
         <ul>
-          <li>Monday 9:00 am - 6:30</li>
-          <li>Tuesday Closed</li>
+          <li>Monday 9:00 am - 6:30 pm</li>
+          <li>
+            <span className="mark">Tuesday Closed</span>
+          </li>
           <li>Wednesday 9:00 am - 6:30 pm </li>
           <li>Thursday 9:00 am - 6:30 pm </li>
           <li>Friday 9:00 am - 5:00 pm</li>

@@ -20,19 +20,20 @@ const Typography = createGlobalStyle`
   }
 
   h2{
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 2rem + 3.9063vw, 4.5rem);
     margin-bottom: 2rem;
   }
   h3{
-    font-size: 3rem;
+    font-size: clamp(2rem, 2rem + 1.5625vw, 3rem);
     margin-bottom: 2rem;
   }
   h4{
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 2rem + 0.7813vw, 2.5rem);
+
     margin-bottom: 2rem;
   }
   h5{
-    font-size: 2.25rem;
+    font-size: clamp(2rem, 2rem + 0.3906vw, 2.25rem);
     margin-bottom: 2rem;
   }
   a {
@@ -40,7 +41,7 @@ const Typography = createGlobalStyle`
     text-decoration-color: var(--red);
   }
   mark, .mark {
-    background: var(--yellow);
+    background: var(--error);
     padding: 0 2px 2px 2px;
     margin: 0;
     display: inline;

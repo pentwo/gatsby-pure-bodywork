@@ -5,8 +5,8 @@ import pregnancyIcon from '../images/icons/icons8-pregnant-100.png'
 import deepTissueIcon from '../images/icons/icons8-acupressure-100.png'
 import aromatherapyIcon from '../images/icons/icons8-oil-massage-100.png'
 
-import remedialBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
-import pregnancyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
+import remedialBg from '../images/background/pexels-anete-lusina-5240643.jpg'
+import pregnancyBg from '../images/treatments/pexels-leah-kelley-618923.jpg'
 import aromatherapyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
 import { Link } from 'gatsby'
 
@@ -155,3 +155,4 @@ const data = [
 ]
 
 // Photo by RODNAE Productions from Pexels
+// Photo by Leah Kelley from Pexels

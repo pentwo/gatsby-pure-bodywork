@@ -15,9 +15,10 @@ const TeamStyles = styled.section`
   background-color: var(--light);
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(35rem, 100%), 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(min(35rem, 100%), 1fr)); */
+    grid-template-columns: minmax(min(35rem, 45rem));
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 5rem;
   }
 

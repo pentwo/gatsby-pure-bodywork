@@ -56,12 +56,13 @@ function Hero() {
 export default Hero
 
 const PageHeroStyles = styled.div`
+  padding-top: 22rem;
   width: 100%;
-  min-height: 30vh;
+  min-height: 15vh;
   background: linear-gradient(
-      to left,
-      var(--primary-opacity),
-      var(--light-opacity)
+      to right,
+      var(--gradient-primary),
+      var(--gradient-secondary)
     ),
     ${props => `url(${props.bg})`};
   background-position: center center;
