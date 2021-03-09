@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { Img } from 'gatsby-image'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+
+import { Link } from 'gatsby'
 
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
+// import FacebookIcon from '../images/icons/facebook-logo.svg'
+// import InstagramIcon from '../images/icons/instagram-logo.svg'
+
 // import ResponsiveMenu from './ResponsiveMenu'
 import Nav from './Nav'
 import logo from '../images/logo.png'
@@ -55,35 +58,6 @@ const HeaderStyles = styled.header`
   }
 `
 
-const Menu = styled.ul`
-  ul {
-    padding: 0;
-  }
-  li {
-    display: inline;
-    font-size: 13px;
-    list-style-type: none;
-    margin-left: 30px;
-  }
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: MediumPurple;
-    &:hover {
-      color: white;
-    }
-  }
-  @media (max-width: 500px) {
-    padding: 10px 0;
-    li {
-      padding: 10px 0;
-      display: block;
-      margin-left: 0;
-    }
-  }
-`
-
 export default function Header(props) {
   const [navAct, setNavAct] = useState(false)
 
@@ -111,7 +85,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <AiFillFacebook />
+                {/* <FacebookIcon /> */}
               </a>
 
               <a
@@ -119,7 +93,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <AiFillInstagram />
+                {/* <InstagramIcon /> */}
               </a>
             </div>
           </div>

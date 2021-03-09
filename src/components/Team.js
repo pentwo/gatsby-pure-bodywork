@@ -47,7 +47,7 @@ export const Team = () => {
       <h3 className="center">About Us</h3>
       <div className="wrapper">
         {members.map(member => (
-          <div className="member">
+          <div className="member" key={member.id}>
             <img src={member.avatarImage} alt="" />
             <h3>{member.name}</h3>
             <article>
@@ -89,6 +89,7 @@ export const Team = () => {
 
 const members = [
   {
+    id: 1,
     name: 'Monica',
     avatarImage: monicaAvatar,
     description:

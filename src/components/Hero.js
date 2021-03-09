@@ -29,6 +29,9 @@ const HeroStyles = styled.div`
     color: var(--primary);
     text-transform: uppercase;
   }
+  @media (max-width: 640px) {
+    padding-top: 17.5rem;
+  }
 `
 
 const SliderStyles = styled.div`
@@ -39,11 +42,11 @@ const SliderStyles = styled.div`
 `
 
 function Hero() {
-  console.log(hero1)
   return (
     <HeroStyles className="center">
-      <h2>Pure Bodywork</h2>
+      <h2>Pure Bodywork Massage & Beauty</h2>
       <h4>A tranquil experience through our caring hands</h4>
+
       <Slider {...sliderSettings}>
         <SliderStyles className="slider-image" bg={hero1} />
         <SliderStyles className="slider-image" bg={hero2} />
