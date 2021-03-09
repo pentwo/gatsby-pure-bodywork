@@ -7,36 +7,42 @@ import { GiLotus } from 'react-icons/gi'
 import { HiClipboardList } from 'react-icons/hi'
 import { ImPriceTag } from 'react-icons/im'
 import { RiContactsBook2Fill } from 'react-icons/ri'
+const BOOKING_URL =
+  'https://perthhealthcare.au1.cliniko.com/bookings?business_id=74448&practitioner_id=159109'
 
 const NavStyles = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 3rem;
 
-  ul.nav-options {
-    width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'nav contact';
+
+  .nav-options {
     display: grid;
-    grid-template-columns: repeat(${props => props.length}, auto);
-    padding: 0;
     gap: 2rem;
-    list-style-type: none;
+
+    padding: 0;
     margin: 0;
+    list-style-type: none;
+    &.nav {
+      grid-area: nav;
+      grid-template-columns: repeat(5, auto);
+      justify-self: start;
+    }
+    &.contact {
+      grid-area: contact;
+      grid-template-columns: repeat(2, auto);
+      justify-self: end;
+    }
   }
-  li.option {
+
+  .option {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .mobile-menu {
-    display: none;
-  }
-  .menu-icon {
-    margin: 0.5rem;
-    width: 36px;
-    height: 36px;
-  }
-  a {
+  .nav a {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5;
@@ -55,7 +61,7 @@ const NavStyles = styled.nav`
       transition: all 0.5s ease-in-out;
 
       opacity: 0;
-      background-color: var(--primary);
+      background-color: var(--purple);
     }
     &:hover {
       cursor: pointer;
@@ -67,33 +73,63 @@ const NavStyles = styled.nav`
       }
     }
   }
+  .contact a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5;
+  }
 
+  /* Menu Button */
+  .mobile-menu {
+    display: none;
+  }
+  .menu-icon {
+    margin: 0.5rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  /* MOBILE DESIGN */
   @media (max-width: 640px) {
-    justify-content: center;
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      'contact'
+      'nav';
 
-    ul.nav-options {
-      grid-template-columns: repeat(1, auto);
-      grid-template-rows: repeat(4, auto);
+    .nav-options {
+      background: var(--primary);
+      position: fixed;
+      width: 100%;
+      display: grid;
 
-      position: absolute;
-      top: 0;
-      height: 100vh;
-      left: -100%;
+      visibility: hidden;
       opacity: 0;
-      transition: all 0.5s ease;
+      transform: translateX(-100%);
+      transition: opacity 0.5s ease;
 
       grid-gap: 0px;
-    }
-    ul.nav-options.active {
-      background: var(--primary);
+      &.nav {
+        grid-template-columns: repeat(1, auto);
+      }
+      &.contact {
+      }
 
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-      align-content: center;
-      padding-left: 0px;
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        transition: opacity 0.5s ease;
+
+        &.nav {
+          transform: translateY(90px);
+        }
+        &.contact {
+        }
+      }
     }
+
     a {
       font-size: 2rem;
       width: 100%;
@@ -117,8 +153,8 @@ const Nav = () => {
   const handleClick = () => setActive(!active)
   const closeMobileMenu = () => setActive(false)
   return (
-    <NavStyles length={navLinks.length}>
-      <ul className={active ? 'nav-options active' : 'nav-options'}>
+    <NavStyles>
+      <ul className={active ? 'nav-options nav active' : 'nav-options nav'}>
         {navLinks.map(i => (
           <li
             className="option"
@@ -132,7 +168,20 @@ const Nav = () => {
           </li>
         ))}
       </ul>
-
+      <ul
+        className={
+          active ? 'nav-options contact active' : 'nav-options contact'
+        }
+      >
+        <li className="option">
+          <a href="tel:+61892211188">(08) 9221 1188</a>
+        </li>
+        <li className="option">
+          <a href={BOOKING_URL}>
+            <button>Book now</button>
+          </a>
+        </li>
+      </ul>
       <button className="mobile-menu" onClick={handleClick}>
         {active ? (
           <MdClose className="menu-icon" />

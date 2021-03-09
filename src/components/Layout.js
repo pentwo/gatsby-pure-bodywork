@@ -6,7 +6,6 @@ import 'slick-carousel/slick/slick-theme.css'
 import { IconContext } from 'react-icons'
 
 import Header from './Header'
-import Nav from './Nav'
 import Footer from './Footer'
 
 import GlobalStyles from '../styles/GlobalStyles'

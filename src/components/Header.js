@@ -3,16 +3,14 @@ import styled from 'styled-components'
 
 import { Link } from 'gatsby'
 
-import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
 import { ReactComponent as FacebookIcon } from '../images/icons/facebook-logo.svg'
 import { ReactComponent as InstagramIcon } from '../images/icons/instagram-logo.svg'
 
-// import ResponsiveMenu from './ResponsiveMenu'
 import Nav from './Nav'
 import logo from '../images/logo.png'
 
 const HeaderStyles = styled.header`
-  padding: 2rem 0;
+  padding: 2rem 0 0 0;
   background: var(--white);
   width: 100%;
   position: fixed;
@@ -36,11 +34,18 @@ const HeaderStyles = styled.header`
     align-items: center;
     margin-bottom: 2rem;
     img {
-      width: 100px;
+      width: 150px;
       transition: all 0.4s linear;
     }
     position: relative;
+
+    &.active {
+      img {
+        width: 64px;
+      }
+    }
   }
+
   .social-icons {
     position: absolute;
     top: 2rem;
@@ -84,7 +89,7 @@ export default function Header(props) {
     <>
       <HeaderStyles className={navAct ? 'active' : ''}>
         <div className="wrapper">
-          <div className="logo">
+          <div className={`logo ${navAct ? 'active' : ''}`}>
             <Link to="/">
               <img className="" src={logo} alt="logo" />
             </Link>
