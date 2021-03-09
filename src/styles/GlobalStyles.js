@@ -7,14 +7,14 @@ ${'' /* *{
   :root {
     ${'' /* https://www.color-hex.com/color/5d4037 */}
     ${'' /* https://www.color-hex.com/color/9fc8a9 */}
-    --primary: #9fc8a9;
-    --dark: #5f7865;
-    --light: #cfe3d4;
-    --purple: #a99fc8;
+    --primary: #ae9f9b;
+    --dark: #685f5d;
+    --light: #cec5c3;
+    --purple: #9f9bae;
 
-    --primary-opacity: #9fc8a9BF;
-    --light-opacity: #cfe3d4BF;
-    --purple-opacity: #a99fc8BF;
+    --primary-opacity: #ae9f9bBF;
+    --light-opacity: #cec5c3BF;
+    --purple-opacity: #9f9baeBF;
 
     --warning: #c8a99f;
     --success: #aac89f;
@@ -27,6 +27,9 @@ ${'' /* *{
 
     --gradient-primary: rgba(225, 225, 225, 0.7);
     --gradient-secondary: rgba(225, 225, 225, 0.5);
+
+    --hero-padding-top: 23.5rem;
+    --hero-mobile-padding-top: 19rem;
   }
   html {
     ${'' /* background-image: url(${bg}); */}
