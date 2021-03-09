@@ -5,6 +5,7 @@ module.exports = {
     description: 'A tranquil experience through our caring hands',
   },
   plugins: [
+    'gatsby-plugin-svgr',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -14,6 +15,14 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
+    // {
+    //   resolve: 'gatsby-plugin-react-svg',
+    //   options: {
+    //     rule: {
+    //       include: /images/,
+    //     },
+    //   },
+    // },
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     {

@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import { AiFillFacebook, AiFillInstagram } from 'react-icons/ai'
-// import FacebookIcon from '../images/icons/facebook-logo.svg'
-// import InstagramIcon from '../images/icons/instagram-logo.svg'
+import { ReactComponent as FacebookIcon } from '../images/icons/facebook-logo.svg'
+import { ReactComponent as InstagramIcon } from '../images/icons/instagram-logo.svg'
 
 // import ResponsiveMenu from './ResponsiveMenu'
 import Nav from './Nav'
@@ -46,14 +46,23 @@ const HeaderStyles = styled.header`
     top: 2rem;
     left: 2rem;
     svg {
-      width: 24px;
-      height: 24px;
+      width: 36px;
+      height: 36px;
+    }
+    a ~ a {
+      margin-left: 1rem;
     }
   }
 
   @media (max-width: 640px) {
     .logo img {
       margin: 0;
+    }
+    .social-icons {
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 `
@@ -85,7 +94,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                {/* <FacebookIcon /> */}
+                <FacebookIcon />
               </a>
 
               <a
@@ -93,7 +102,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                {/* <InstagramIcon /> */}
+                <InstagramIcon />
               </a>
             </div>
           </div>
