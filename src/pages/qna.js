@@ -4,8 +4,6 @@ import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
 const QnAStyles = styled.div`
-  margin: 5rem 3rem;
-
   article {
     margin-bottom: 3rem;
   }
