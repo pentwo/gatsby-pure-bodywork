@@ -26,6 +26,7 @@ export const treatmentsData = [
     id: 2,
     name: 'Relaxation Massage',
     price: [
+      { time: '30m', price: '-' },
       { time: '45m', price: '$70' },
       { time: '60m', price: '$90' },
       { time: '90m', price: '$130' },
@@ -39,6 +40,7 @@ export const treatmentsData = [
     id: 3,
     name: 'Deep Tissue Massage',
     price: [
+      { time: '30m', price: '-' },
       { time: '45m', price: '$70' },
       { time: '60m', price: '$90' },
       { time: '90m', price: '$130' },
@@ -52,6 +54,7 @@ export const treatmentsData = [
     id: 4,
     name: 'Aromatherapy Massage',
     price: [
+      { time: '30m', price: '-' },
       { time: '45m', price: '$80' },
       { time: '60m', price: '$100' },
       { time: '90m', price: '$145' },
@@ -65,8 +68,11 @@ export const treatmentsData = [
     id: 5,
     name: 'Pregnancy Massage',
     price: [
+      { time: '30m', price: '-' },
+      { time: '45m', price: '-' },
       { time: '60m', price: '$95' },
       { time: '90m', price: '$140' },
+      { time: '120m', price: '-' },
     ],
     image: pregnancyBg,
     description:
@@ -76,6 +82,8 @@ export const treatmentsData = [
     id: 6,
     name: 'Hot Stone Massage',
     price: [
+      { time: '30m', price: '-' },
+      { time: '45m', price: '-' },
       { time: '60m', price: '$100' },
       { time: '90m', price: '$145' },
       { time: '120m', price: '$185' },
@@ -88,6 +96,8 @@ export const treatmentsData = [
     id: 7,
     name: 'Couple Massage',
     price: [
+      { time: '30m', price: '-' },
+      { time: '45m', price: '-' },
       { time: '60m', price: '$200' },
       { time: '90m', price: '$280' },
       { time: '120m', price: '$380' },
@@ -103,6 +113,8 @@ export const treatmentsData = [
       { time: '30m', price: '$50' },
       { time: '45m', price: '$65' },
       { time: '60m', price: '$80' },
+      { time: '90m', price: '-' },
+      { time: '120m', price: '-' },
     ],
     image: singingBowlBg,
     description:
