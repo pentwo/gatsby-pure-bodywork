@@ -15,51 +15,6 @@ import hotStoneBg from '../images/treatments/hotStone.jpg'
 import coupleBg from '../images/treatments/couple.jpg'
 import singingBowlBg from '../images/treatments/singingBowl.jpg'
 
-const TreatmentsStyles = styled.div`
-  .wrapper-column {
-    padding-top: 3rem;
-  }
-  .Collapsible {
-    /* &__trigger {
-      h3 {
-        margin-left: 3rem;
-        margin-bottom: 0;
-      }
-      &.is-open {
-        .icon {
-          transform: rotateZ(180deg);
-        }
-      }
-
-      position: relative;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-
-      min-height: 96px;
-
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-
-      .icon {
-        height: 48px;
-        width: 48px;
-        position: absolute;
-        right: 3rem;
-        top: 24px;
-        display: block;
-        transition: transform 300ms;
-      }
-    } */
-  }
-`
-/* background-image: linear-gradient(
-          to right,
-          var(--gradient-primary),
-          var(--gradient-secondary)
-        ),
-        ${`url(${remedialBg})`}; */
 const CollapsibleStyles = styled.div`
   .Collapsible {
     margin-bottom: 3rem;
@@ -112,30 +67,29 @@ export default function TreatmentsPage() {
       <SEO title="Treatments"></SEO>
 
       <PageHero title="Treatments" />
-      <TreatmentsStyles>
-        <div className="wrapper-column">
-          {treatmentsData.map(treatment => {
-            return (
-              <CollapsibleStyles bg={treatment.image}>
-                <Collapsible
-                  key={`treatment-${treatment.id}`}
-                  trigger={
-                    <>
-                      <h3>{treatment.name}</h3>
-                      <IoIosArrowDropup className="icon" />
-                    </>
-                  }
-                >
-                  <div
-                    className="description"
-                    dangerouslySetInnerHTML={{ __html: treatment.description }}
-                  />
-                </Collapsible>
-              </CollapsibleStyles>
-            )
-          })}
-        </div>
-      </TreatmentsStyles>
+
+      <div className="wrapper-column">
+        {treatmentsData.map(treatment => {
+          return (
+            <CollapsibleStyles bg={treatment.image}>
+              <Collapsible
+                key={`treatment-${treatment.id}`}
+                trigger={
+                  <>
+                    <h3>{treatment.name}</h3>
+                    <IoIosArrowDropup className="icon" />
+                  </>
+                }
+              >
+                <div
+                  className="description"
+                  dangerouslySetInnerHTML={{ __html: treatment.description }}
+                />
+              </Collapsible>
+            </CollapsibleStyles>
+          )
+        })}
+      </div>
     </main>
   )
 }
