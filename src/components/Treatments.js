@@ -54,7 +54,6 @@ const TreatmentsStyles = styled.section`
 
 const CardStyles = styled.div`
   height: 20rem;
-  /* min-width: 25rem; */
   border-radius: 1rem;
 
   overflow: hidden;
@@ -121,16 +120,16 @@ export const Treatments = () => {
 
 const data = [
   {
-    name: 'Remedial Massage',
-    background: `${remedialBg}`,
+    name: 'Pregnancy Massage',
+    background: pregnancyBg,
   },
   {
-    name: 'Pregnancy Massage',
-    background: `${pregnancyBg}`,
+    name: 'Remedial Massage',
+    background: remedialBg,
   },
   {
     name: 'Aromatherapy Massage',
-    background: `${aromatherapyBg}`,
+    background: aromatherapyBg,
   },
   // {
   //   name: 'Deep Tissue Massage',
