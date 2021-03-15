@@ -122,6 +122,7 @@ ${'' /* *{
     display: flex;
     justify-content: space-between;
     padding: 0 3rem;
+    margin: 0 auto;
   }
   .wrapper-column {
     margin-left: auto;
@@ -130,7 +131,9 @@ ${'' /* *{
     max-width: 960px;
     display: flex;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding-top: 3rem;
+    padding-right: 3rem;
+    padding-left: 3rem;
     flex-direction: column;
   }
 `

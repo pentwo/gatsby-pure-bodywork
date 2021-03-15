@@ -4,6 +4,10 @@ import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
 import { treatmentsData } from '../data/treatmentsData'
+import remedialIcon from '../images/icons/massage.svg'
+import aromaIcon from '../images/icons/aroma.svg'
+import pregnancyIcon from '../images/icons/mother.svg'
+import { BOOKING_URL } from '../data/utility'
 
 const tableHeader = ['Treatments']
 
@@ -15,6 +19,8 @@ export default function PricePage() {
 
         <PageHero title="Price" />
         <div className="wrapper-column">
+          <Cards />
+          <h2 className="center">Price List</h2>
           <Table
             header={[
               ...tableHeader,
@@ -31,7 +37,7 @@ export default function PricePage() {
 const TableStyles = styled.div`
   margin: 0 0 3rem 0;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
   display: table;
 
   @media (max-width: 640px) {
@@ -48,6 +54,11 @@ const TableStyles = styled.div`
       font-weight: 900;
       color: var(--white);
       background: var(--dark);
+    }
+    &:not(:nth-of-type(1)) {
+      :hover {
+        background: var(--purple);
+      }
     }
   }
   @media (max-width: 640px) {
@@ -120,5 +131,173 @@ const Table = ({ header, data }) => {
         </div>
       ))}
     </TableStyles>
+  )
+}
+
+const ContainerStyles = styled.div`
+  margin: 7rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 285px));
+  grid-template-rows: auto auto auto 2fr;
+  justify-content: space-between;
+  gap: 2rem;
+
+  @media (max-width: 640px) {
+    grid-template-columns: repeat(1, 100%);
+  }
+`
+const CardStyles = styled.div`
+  text-align: center;
+  position: relative;
+  max-width: 300px;
+  height: auto;
+
+  border-radius: 15px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: 1 / -1;
+
+  @media (max-width: 640px) {
+    /* padding: 2rem 1rem; */
+    max-width: 75vw;
+    grid-template-columns: 1fr 1fr 0 1fr;
+    grid-template-rows: auto;
+    grid-row: unset;
+    align-items: center;
+
+    :nth-child(1) {
+    }
+    :nth-child(2) {
+    }
+    :nth-child(3) {
+    }
+  }
+
+  :hover {
+    transform: scale(1.1);
+  }
+  :nth-child(1) {
+    background: linear-gradient(-45deg, var(--light), var(--success));
+  }
+  :nth-child(2) {
+    background: linear-gradient(-45deg, var(--light), var(--purple));
+  }
+  :nth-child(3) {
+    background: linear-gradient(-45deg, var(--light), var(--warning));
+  }
+
+  .title {
+    .icon {
+      top: 0;
+      left: 0;
+      width: 128px;
+      height: 128px;
+
+      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    }
+
+    h2 {
+      position: relative;
+      margin: 2rem 0 1rem;
+      padding: 0;
+      color: var(--black);
+      font-size: 28px;
+      z-index: 2;
+    }
+    @media (max-width: 640px) {
+      /* display: flex; */
+      /* align-items: center; */
+    }
+  }
+  .price,
+  .option {
+    /* position: relative; */
+    /* z-index: 2; */
+  }
+  .price {
+    h4 {
+      margin: 0;
+      padding: 20px 0;
+
+      color: var(--black);
+      font-size: 6rem;
+    }
+    h5 {
+      color: var(--black);
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      h4 {
+        padding: 20px 0 0 0;
+      }
+    }
+  }
+
+  .option ul {
+    margin: 0;
+    padding: 0;
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
+  .option ul li {
+    margin: 0 0 10px;
+    padding: 0;
+    list-style: none;
+    color: var(--black);
+    font-size: 16px;
+  }
+  button {
+    font-size: 2.5rem;
+    @media (max-width: 640px) {
+      font-size: 1.5rem;
+    }
+  }
+`
+
+const Card = ({ data }) => {
+  return (
+    <CardStyles className="card">
+      <div className="title">
+        <img className="icon" src={data.icon} alt="" />
+        <h2>{data.name}</h2>
+      </div>
+      <div className="price">
+        <h5>Starting from</h5>
+        <h4>{data.price}</h4>
+      </div>
+      <div className="option">
+        <ul>
+          <li>Option 1</li>
+          <li>Option 2</li>
+          <li>Option 3</li>
+        </ul>
+      </div>
+      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+        <button>BOOK NOW</button>
+      </a>
+    </CardStyles>
+  )
+}
+
+const Cards = () => {
+  return (
+    <ContainerStyles>
+      <Card
+        data={{ name: 'Aromatherapy Massage', price: '$80', icon: aromaIcon }}
+      />
+      <Card
+        data={{ name: 'Remedial Massage', price: '$55', icon: remedialIcon }}
+      />
+      <Card
+        data={{ name: 'Pregnancy Massage', price: '$95', icon: pregnancyIcon }}
+      />
+    </ContainerStyles>
   )
 }
