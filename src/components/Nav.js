@@ -7,8 +7,8 @@ import { GiLotus } from 'react-icons/gi'
 import { HiClipboardList } from 'react-icons/hi'
 import { ImPriceTag } from 'react-icons/im'
 import { RiContactsBook2Fill } from 'react-icons/ri'
-const BOOKING_URL =
-  'https://perthhealthcare.au1.cliniko.com/bookings?business_id=74448&practitioner_id=159109'
+
+import { BOOKING_URL } from '../data/utility'
 
 const NavStyles = styled.nav`
   padding: 0 3rem;
@@ -177,7 +177,7 @@ const Nav = () => {
           <a href="tel:+61892211188">(08) 9221 1188</a>
         </li>
         <li className="option">
-          <a href={BOOKING_URL}>
+          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
             <button>Book now</button>
           </a>
         </li>
