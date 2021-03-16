@@ -44,6 +44,11 @@ const HeaderStyles = styled.header`
         width: 64px;
       }
     }
+    @media (max-width: 640px) {
+      img {
+        width: 64px;
+      }
+    }
   }
 
   .social-icons {
