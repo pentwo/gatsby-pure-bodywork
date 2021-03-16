@@ -145,6 +145,7 @@ const ContainerStyles = styled.div`
 
   @media (max-width: 640px) {
     grid-template-columns: repeat(1, 100%);
+    gap: 3rem;
   }
 `
 const CardStyles = styled.div`
@@ -164,11 +165,12 @@ const CardStyles = styled.div`
   grid-row: 1 / -1;
 
   @media (max-width: 640px) {
-    /* padding: 2rem 1rem; */
+    padding: 2rem 1rem;
     max-width: 75vw;
-    grid-template-columns: 1fr 1fr 0 1fr;
+    grid-template-columns: 1fr 1fr 0;
     grid-template-rows: auto;
     grid-row: unset;
+    gap: 2rem;
     align-items: center;
 
     :nth-child(1) {
@@ -207,12 +209,17 @@ const CardStyles = styled.div`
       margin: 2rem 0 1rem;
       padding: 0;
       color: var(--black);
-      font-size: 28px;
+      font-size: 3rem;
       z-index: 2;
     }
     @media (max-width: 640px) {
-      /* display: flex; */
-      /* align-items: center; */
+      .icon {
+        width: 64px;
+        height: 64px;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
     }
   }
   .price,
@@ -253,10 +260,16 @@ const CardStyles = styled.div`
     color: var(--black);
     font-size: 16px;
   }
+  a {
+    @media (max-width: 640px) {
+      grid-column: 1 / -1;
+    }
+  }
   button {
     font-size: 2.5rem;
     @media (max-width: 640px) {
       font-size: 1.5rem;
+      grid-column: 1 / -1;
     }
   }
 `
