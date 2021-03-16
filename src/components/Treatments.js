@@ -14,8 +14,9 @@ const TreatmentsStyles = styled.section`
   min-height: 25vh;
   .wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
+
+    gap: 4rem;
   }
 
   .shadow-drop-2-center:hover {
@@ -24,7 +25,7 @@ const TreatmentsStyles = styled.section`
   }
   @media (max-width: 640px) {
     .wrapper {
-      grid-template-columns: minmax(35rem, 1fr);
+      grid-template-columns: minmax(30rem, 1fr);
     }
   }
 
