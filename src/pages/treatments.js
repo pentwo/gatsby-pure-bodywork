@@ -52,6 +52,28 @@ const CollapsibleStyles = styled.div`
         transition: all 300ms;
       }
     }
+
+    @media (max-width: 640px) {
+      &__trigger {
+        min-height: 96px;
+        &.is-open {
+          min-height: 192px;
+          .icon {
+            top: 78px;
+          }
+        }
+        h3 {
+          width: 75%;
+          margin-left: 1.5rem;
+        }
+        .icon {
+          height: 36px;
+          width: 36px;
+          top: 30px;
+          right: 1rem;
+        }
+      }
+    }
   }
 `
 
