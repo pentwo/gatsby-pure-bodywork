@@ -11,19 +11,20 @@ import { RiContactsBook2Fill } from 'react-icons/ri'
 import { BOOKING_URL } from '../data/utility'
 
 const NavStyles = styled.nav`
-  padding: 0 3rem;
+  padding: 0.25rem 3rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'nav contact';
-
+  background-color: var(--grey);
   .nav-options {
     display: grid;
     gap: 2rem;
 
-    padding: 0;
     margin: 0;
+    padding: 0;
     list-style-type: none;
+
     &.nav {
       grid-area: nav;
       grid-template-columns: repeat(5, auto);
