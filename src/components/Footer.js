@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { AiFillPhone, AiFillMail } from 'react-icons/ai'
 import { Link } from 'gatsby'
+import { businessHour } from '../data/utility'
 
 const FooterStyles = styled.div`
   padding: 3rem 10vw;
 
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto auto;
   gap: 3rem;
 
   background: var(--light);
@@ -49,7 +50,15 @@ const FooterStyles = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto 1fr;
     .hours {
-      /* grid-row: 1/2; */
+      li ~ li {
+        margin-bottom: 1rem;
+      }
+      li {
+        flex-direction: column;
+      }
+      .hour {
+        text-align: right;
+      }
     }
     .copyrights {
       grid-column: 1;
@@ -63,34 +72,14 @@ export default function Footer() {
       <div className="hours">
         <h5>Business Hours</h5>
         <ul>
-          <li>
-            <span>Monday</span>
-            <span>9:00 am - 6:30 pm</span>
-          </li>
-          <li className="mark">
-            <span>Tuesday</span>
-            <span>Closed</span>
-          </li>
-          <li>
-            <span>Wednesday</span>
-            <span>9:00 am - 6:30 pm</span>
-          </li>
-          <li>
-            <span>Thursday</span>
-            <span>9:00 am - 6:30 pm</span>
-          </li>
-          <li>
-            <span>Friday</span>
-            <span>9:00 am - 5:00 pm</span>
-          </li>
-          <li>
-            <span>Saturday</span>
-            <span>10:00 am - 2:00 pm</span>
-          </li>
-          <li>
-            <span>Sunday</span>
-            <span>11:00 am - 4:00 pm</span>
-          </li>
+          {businessHour.map(item => {
+            return (
+              <li key={item.day}>
+                <span className="day">{item.day}</span>
+                <span className="hour">{item.hour}</span>
+              </li>
+            )
+          })}
         </ul>
       </div>
 
