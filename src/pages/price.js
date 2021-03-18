@@ -28,6 +28,16 @@ export default function PricePage() {
             ]}
             data={treatmentsData}
           />
+          {/* <h3 className="center">Surcharge</h3> */}
+          <p style={{ marginBottom: '3rem' }}>
+            *Please not a surcharge $5 will be added to all the treatments
+            Sunday and Public Holiday
+          </p>
+          <h3 className="center">Cancellation Policy</h3>
+          <p>
+            Cancellation has to be made in 24 hours before the treatment to
+            aviod losing your booking.
+          </p>
         </div>
       </main>
     </>
@@ -35,9 +45,9 @@ export default function PricePage() {
 }
 
 const TableStyles = styled.div`
-  margin: 0 0 3rem 0;
+  margin: 0 0 1rem 0;
   width: 100%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
   display: table;
 
   @media (max-width: 640px) {
