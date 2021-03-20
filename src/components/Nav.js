@@ -178,9 +178,9 @@ const Nav = () => {
           <a href="tel:+61892211188">(08) 9221 1188</a>
         </li>
         <li className="option">
-          <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+          <Link to="booking">
             <button>Book now</button>
-          </a>
+          </Link>
         </li>
       </ul>
       <button className="mobile-menu" onClick={handleClick}>

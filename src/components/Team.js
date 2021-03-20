@@ -29,6 +29,7 @@ const TeamStyles = styled.section`
   article {
   }
   img {
+    max-width: 300px;
     border-radius: 5000px;
     margin-bottom: 2rem;
   }

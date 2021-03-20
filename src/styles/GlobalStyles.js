@@ -135,6 +135,10 @@ ${'' /* *{
     padding-right: 3rem;
     padding-left: 3rem;
     flex-direction: column;
+    &.fluid{
+      margin: 0;
+      max-width: 100vw;
+    }
   }
 `
 
