@@ -116,6 +116,9 @@ export default function Footer() {
           <li>
             <Link to="/contact">CONTACT</Link>
           </li>
+          <li>
+            <Link to="/booking">BOOKING</Link>
+          </li>
         </ul>
       </div>
       <div className="copyrights center">
