@@ -50,11 +50,10 @@ export default function ContactPage() {
   const submitMessage = e => {
     e.preventDefault()
 
-    let formData = new FormData(values)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
+      body: encode({ 'form-name': 'contact', ...values }),
     })
       .then(() => console.log('Form successfully submitted'))
       .catch(error => alert(error))
