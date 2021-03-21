@@ -79,7 +79,7 @@ const BookingPage = () => {
                     onClick={() => handleClick(member)}
                     key={member.id}
                   >
-                    <img src={member.avatarImage} />
+                    {/* <img src={member.avatarImage} /> */}
                     <h5>{member.name}</h5>
                   </div>
                 )
