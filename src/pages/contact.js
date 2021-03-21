@@ -48,7 +48,16 @@ export default function ContactPage() {
   })
 
   const submitMessage = e => {
-    // e.preventDefault()
+    e.preventDefault()
+
+    let formData = new FormData(values)
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log('Form successfully submitted'))
+      .catch(error => alert(error))
   }
 
   return (
@@ -75,10 +84,12 @@ export default function ContactPage() {
           <h4>Write to us</h4>
           <FormStyles
             name="contact"
+            method="POST"
             onSubmit={submitMessage}
             data-netlify-recaptcha="true"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <fieldset>
               <legend>Your Info</legend>
               <label htmlFor="name">Name</label>
