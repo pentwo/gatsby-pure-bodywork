@@ -89,7 +89,6 @@ export default function ContactPage() {
             name="contact"
             method="POST"
             onSubmit={submitMessage}
-            data-netlify-recaptcha="true"
             data-netlify="true"
           >
             <input type="hidden" name="form-name" value="contact" />
@@ -131,7 +130,7 @@ export default function ContactPage() {
                 onChange={updateValue}
               ></textarea>
             </fieldset>
-            <div className="recaptcha" data-netlify-recaptcha="true"></div>
+
             <div className="buttons">
               <button type="submit">Submit</button>
             </div>
