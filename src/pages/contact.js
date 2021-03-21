@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { navigate } from 'gatsby-link'
 import { AiFillPhone, AiFillMail } from 'react-icons/ai'
 
 import { PageHero } from '../components/Hero'
@@ -53,13 +54,13 @@ export default function ContactPage() {
   }
   const submitMessage = e => {
     e.preventDefault()
-
+    const form = e.target
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...values }),
     })
-      .then(() => console.log('Form successfully submitted'))
+      .then(() => navigate(form.getAttribute('action')))
       .catch(error => alert(error))
   }
 
@@ -90,6 +91,7 @@ export default function ContactPage() {
             method="POST"
             onSubmit={submitMessage}
             data-netlify="true"
+            action="/thankyou"
           >
             <input type="hidden" name="form-name" value="contact" />
             <fieldset>
