@@ -11,25 +11,36 @@ const BookingStyles = styled.div`
 
   .name-tags {
     display: flex;
-    gap: 2rem;
+
     margin-bottom: 3rem;
     .tag {
       display: flex;
       align-items: center;
 
+      cursor: pointer;
       padding: 1rem;
-      border: 1px solid var(--dark);
+
       border-radius: 5px;
 
-      h5 {
-        margin: 0;
+      --cast: 2px;
+      box-shadow: var(--cast) var(--cast) 0 var(--grey);
+      text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: var(--light);
+        --cast: 4px;
       }
       &.active {
-        background-color: var(--grey);
-        h5 {
-          font-weight: bold;
-        }
+        background: var(--purple);
+        color: var(--white);
       }
+    }
+    .tag ~ .tag {
+      margin-left: 2rem;
+    }
+    h5 {
+      margin: 0;
     }
   }
 `
