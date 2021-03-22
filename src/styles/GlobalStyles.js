@@ -1,12 +1,7 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
-${'' /* *{
-  outline: red solid 1px;
-} */}
   :root {
-    ${'' /* https://www.color-hex.com/color/5d4037 */}
-    ${'' /* https://www.color-hex.com/color/9fc8a9 */}
     --primary: #ae9f9b;
     --dark: #685f5d;
     --light: #cec5c3;
@@ -32,7 +27,6 @@ ${'' /* *{
     --hero-mobile-padding-top: 10.5rem;
   }
   html {
-    ${'' /* background-image: url(${bg}); */}
     background: var(--white);
     background-size: 450px;
     background-attachment: fixed;
@@ -52,7 +46,7 @@ ${'' /* *{
 
   button {
     background: var(--purple);
-    color: white;
+    color: var(--white);
     border: 0;
     padding: 0.6rem 1rem;
     border-radius: 4px;
@@ -66,10 +60,6 @@ ${'' /* *{
     }
   }
 
-  .gatsby-image-wrapper img[src*=base64\\,] {
-    image-rendering: -moz-crisp-edges;
-    image-rendering: pixelated;
-  }
 
   /* Scrollbar Styles */
   body::-webkit-scrollbar {
@@ -91,7 +81,6 @@ ${'' /* *{
   hr {
     border: 0;
     height: 8px;
-    ${'' /* background-image: url(${stripes}); */}
     background-size: 1500px;
   }
 
