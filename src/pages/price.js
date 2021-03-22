@@ -8,6 +8,7 @@ import remedialIcon from '../images/icons/massage.svg'
 import aromaIcon from '../images/icons/aroma.svg'
 import pregnancyIcon from '../images/icons/mother.svg'
 import { BOOKING_URL } from '../data/utility'
+import { Link } from 'gatsby'
 
 const tableHeader = ['Treatments']
 
@@ -28,15 +29,16 @@ export default function PricePage() {
             ]}
             data={treatmentsData}
           />
-          {/* <h3 className="center">Surcharge</h3> */}
           <p style={{ marginBottom: '3rem' }}>
-            *Please not a surcharge $5 will be added to all the treatments
-            Sunday and Public Holiday
+            <span className="mark">
+              *Please not a surcharge $5 will be added to all the treatments
+              Sunday and Public Holiday
+            </span>
           </p>
           <h3 className="center">Cancellation Policy</h3>
           <p>
-            Cancellation has to be made in 24 hours before the treatment to
-            aviod losing your booking.
+            If you cancel/reschedule or do not attend your appointment without
+            providing 24 hrs notice, a fee of $50 will be charged.
           </p>
         </div>
       </main>
@@ -295,16 +297,20 @@ const Card = ({ data }) => {
         <h5>Starting from</h5>
         <h4>{data.price}</h4>
       </div>
-      <div className="option">
-        <ul>
-          <li>Option 1</li>
-          <li>Option 2</li>
-          <li>Option 3</li>
-        </ul>
-      </div>
-      <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+      {data.option ? (
+        <div className="option">
+          <ul>
+            {data.option.map(i => (
+              <li>{i}</li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        ''
+      )}
+      <Link to="/booking">
         <button>BOOK NOW</button>
-      </a>
+      </Link>
     </CardStyles>
   )
 }
@@ -313,7 +319,11 @@ const Cards = () => {
   return (
     <ContainerStyles>
       <Card
-        data={{ name: 'Aromatherapy Massage', price: '$80', icon: aromaIcon }}
+        data={{
+          name: 'Aromatherapy Massage',
+          price: '$80',
+          icon: aromaIcon,
+        }}
       />
       <Card
         data={{ name: 'Remedial Massage', price: '$55', icon: remedialIcon }}
