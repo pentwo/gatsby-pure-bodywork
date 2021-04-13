@@ -16,7 +16,7 @@ const TeamStyles = styled.section`
   .wrapper {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(min(35rem, 100%), 1fr)); */
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: ${props => `repeat(${props.length})`};
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
@@ -45,7 +45,7 @@ const TeamStyles = styled.section`
 
 export const Team = () => {
   return (
-    <TeamStyles>
+    <TeamStyles length={members.length}>
       <h3 className="center">About Us</h3>
       <div className="wrapper">
         {members.map(member => (

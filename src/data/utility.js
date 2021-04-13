@@ -26,15 +26,15 @@ export const members = [
     booking:
       'https://perthhealthcare.au1.cliniko.com/bookings?practitioner_id=159109',
   },
-  {
-    id: 160950,
-    name: 'Emily Yeh',
-    avatarImage: emilyAvatar,
-    description:
-      'Emily is fully trained, and has a diploma in remedial massage therapy. She is registered and has a provider number for most private health funds.',
-    fullDescription:
-      '<p>Emily is fully trained, and has a diploma in remedial massage therapy. She is registered and has a provider number for most private health funds.</p><p>Emily specialises in relaxation, deep tissue, remedial, sport and hot stone massage. She is kind, friendly and passionate about her work.</p><p>Emily always does her best to meet her clients needs and her goal is to make you leave our clinic satisfied.</p><h5>Qualification Details</h5><ul><li>Massage association of Australia</li><li>Diploma of Remedial Massage</li></ul>',
-    booking:
-      'https://perthhealthcare.au1.cliniko.com/bookings?practitioner_id=160950',
-  },
+  // {
+  //   id: 160950,
+  //   name: 'Emily Yeh',
+  //   avatarImage: emilyAvatar,
+  //   description:
+  //     'Emily is fully trained, and has a diploma in remedial massage therapy. She is registered and has a provider number for most private health funds.',
+  //   fullDescription:
+  //     '<p>Emily is fully trained, and has a diploma in remedial massage therapy. She is registered and has a provider number for most private health funds.</p><p>Emily specialises in relaxation, deep tissue, remedial, sport and hot stone massage. She is kind, friendly and passionate about her work.</p><p>Emily always does her best to meet her clients needs and her goal is to make you leave our clinic satisfied.</p><h5>Qualification Details</h5><ul><li>Massage association of Australia</li><li>Diploma of Remedial Massage</li></ul>',
+  //   booking:
+  //     'https://perthhealthcare.au1.cliniko.com/bookings?practitioner_id=160950',
+  // },
 ]

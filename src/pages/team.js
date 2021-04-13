@@ -7,17 +7,8 @@ import { members } from '../data/utility'
 import bg from '../images/background/pexels-anete-lusina-5240643.jpg'
 
 const TeamStyles = styled.div`
-  /* background-image: linear-gradient(
-      to right,
-      var(--gradient-primary),
-      var(--gradient-secondary)
-    ),
-    url(${bg});
-  background-position: center center;
-  background-size: cover;
-  background-attachment: fixed; */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: ${props => `repeat(${props.length}, 1fr)`};
   gap: 2rem;
 `
 
@@ -38,6 +29,7 @@ const MemberStyles = styled.section`
 `
 
 export default function TeamPage() {
+  console.log(members)
   return (
     <>
       <main>
@@ -45,7 +37,7 @@ export default function TeamPage() {
 
         <PageHero title="Our Team" />
         <div className="wrapper">
-          <TeamStyles>
+          <TeamStyles length={members.length}>
             {members.map(member => {
               return (
                 <MemberStyles key={member.name}>
