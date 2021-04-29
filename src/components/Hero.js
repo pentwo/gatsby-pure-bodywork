@@ -4,7 +4,7 @@ import bg from '../images/room-1.jpeg'
 import { BsArrowRight } from 'react-icons/bs'
 import Slider from 'react-slick'
 
-import hero1 from '../images/room-1.jpeg'
+import hero1 from '../images/room-3.jpg'
 import hero2 from '../images/reception-1.jpg'
 import hero3 from '../images/room-4.jpg'
 import hero4 from '../images/street-view.jpeg'
