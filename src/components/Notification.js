@@ -46,7 +46,7 @@ const NotificationStyles = styled.div`
 
 export default function Notification() {
   const [show, setShow] = useState(true)
-  const [noteHeight, setNoteHeight] = useState(50)
+  const [noteHeight, setNoteHeight] = useState(0)
 
   const noteRef = useRef()
 
