@@ -7,7 +7,7 @@ import { treatmentsData } from '../data/treatmentsData'
 import remedialIcon from '../images/icons/massage.svg'
 import aromaIcon from '../images/icons/aroma.svg'
 import pregnancyIcon from '../images/icons/mother.svg'
-import { BOOKING_URL } from '../data/utility'
+
 import { Link } from 'gatsby'
 
 const tableHeader = ['Treatments']
