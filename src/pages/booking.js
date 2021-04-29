@@ -93,6 +93,7 @@ const BookingPage = () => {
             </div>
             {url ? (
               <iframe
+                title="booking page"
                 id="cliniko-9992835"
                 src={`${url}&embedded=true`}
                 frameBorder="0"
