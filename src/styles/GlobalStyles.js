@@ -24,7 +24,7 @@ const GlobalStyles = createGlobalStyle`
     --gradient-secondary: rgba(225, 225, 225, 0.5);
 
     --hero-padding-top: 23.5rem;
-    --hero-mobile-padding-top: 10.5rem;
+    --hero-mobile-padding-top: 13.5rem;
   }
   html {
     background: var(--white);

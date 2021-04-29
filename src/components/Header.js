@@ -8,6 +8,7 @@ import { ReactComponent as InstagramIcon } from '../images/icons/instagram-logo.
 
 import Nav from './Nav'
 import logo from '../images/logo.png'
+import Notification from './Notification'
 
 const HeaderStyles = styled.header`
   padding: 2rem 0 0 0;
@@ -46,7 +47,8 @@ const HeaderStyles = styled.header`
     }
     @media (max-width: 640px) {
       img {
-        width: 64px;
+        width: 96px;
+        margin: 0;
       }
     }
   }
@@ -65,9 +67,6 @@ const HeaderStyles = styled.header`
   }
 
   @media (max-width: 640px) {
-    .logo img {
-      margin: 0;
-    }
     .social-icons {
       svg {
         width: 24px;
@@ -93,6 +92,7 @@ export default function Header(props) {
   return (
     <>
       <HeaderStyles className={navAct ? 'active' : ''}>
+        <Notification />
         <div className="wrapper">
           <div className={`logo ${navAct ? 'active' : ''}`}>
             <Link to="/">
