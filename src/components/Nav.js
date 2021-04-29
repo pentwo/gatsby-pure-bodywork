@@ -44,6 +44,7 @@ const NavStyles = styled.nav`
   }
 
   .nav a {
+    font-size: 1.8rem;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5;
@@ -86,8 +87,9 @@ const NavStyles = styled.nav`
   }
   .menu-icon {
     margin: 0.5rem;
-    width: 36px;
-    height: 36px;
+
+    width: 24px;
+    height: 24px;
   }
 
   /* MOBILE DESIGN */
@@ -141,7 +143,7 @@ const NavStyles = styled.nav`
     .option {
     }
     .mobile-menu {
-      z-index: 999;
+      z-index: 100;
       display: block;
       position: absolute;
       right: 2rem;
