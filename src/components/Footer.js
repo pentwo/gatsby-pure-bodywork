@@ -11,7 +11,7 @@ const FooterStyles = styled.div`
   grid-template-columns: 1fr auto auto;
   gap: 3rem;
 
-  background: var(--light);
+  background: var(--white);
 
   font-size: 1.5rem;
 
