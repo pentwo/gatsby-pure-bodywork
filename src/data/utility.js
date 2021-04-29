@@ -1,17 +1,24 @@
 import monicaAvatar from '../images/avatar-monica.png'
 import emilyAvatar from '../images/avatar-emily.png'
 
+export const note = {
+  text: 'Refer a friend a Massage for $20 off both yourself and your friend.',
+  link:
+    'https://www.facebook.com/purebodywork.au/photos/a.2224374394508748/2957156024563911/',
+}
+
 export const BOOKING_URL =
   'https://perthhealthcare.au1.cliniko.com/bookings?business_id=74448&practitioner_id=159109'
 
 export const businessHour = [
-  { day: 'Monday', hour: '8.00 am - 8.00 pm' },
-  { day: 'Tuesday', hour: '8.00 am - 8.00 pm' },
-  { day: 'Wednesday', hour: '10.00 am - 6.00 pm' },
-  { day: 'Thursday', hour: '8.00 am - 8.00 pm' },
-  { day: 'Friday', hour: '8.00 am - 8.00 pm' },
-  { day: 'Saturday', hour: '8.00 am - 6.00 pm' },
-  { day: 'Sunday / Public Holiday', hour: '8.00 am - 6.00 pm' },
+  { day: 'Monday', hour: 'Close' },
+  { day: 'Tuesday', hour: '9.00 am - 5.00 pm' },
+  { day: 'Wednesday', hour: '9.00 am - 5.00 pm' },
+  { day: 'Thursday', hour: '9.00 am - 5.00 pm' },
+  { day: 'Friday', hour: '9.00 am - 5.00 pm' },
+  { day: 'Saturday', hour: '12.00 pm - 5.00 pm' },
+  { day: 'Sunday', hour: '12.00 pm - 5.00 pm' },
+  { day: 'Public Holiday', hour: 'Close' },
 ]
 
 export const members = [
