@@ -1,5 +1,4 @@
 import monicaAvatar from '../images/avatar-monica.png'
-import emilyAvatar from '../images/avatar-emily.png'
 
 export const note = {
   text: 'Refer a friend a Massage for $20 off both yourself and your friend.',
