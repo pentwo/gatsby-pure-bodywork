@@ -4,7 +4,6 @@ import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
 import { members } from '../data/utility'
-import bg from '../images/background/pexels-anete-lusina-5240643.jpg'
 
 const TeamStyles = styled.div`
   display: grid;
