@@ -23,7 +23,7 @@ const GlobalStyles = createGlobalStyle`
     --gradient-primary: rgba(225, 225, 225, 0.7);
     --gradient-secondary: rgba(225, 225, 225, 0.5);
 
-    --hero-padding-top: 23.5rem;
+    --hero-padding-top: 25rem;
     --hero-mobile-padding-top: 13.5rem;
   }
   html {
