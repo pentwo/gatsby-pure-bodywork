@@ -12,11 +12,10 @@ export const treatmentsData = [
     id: 1,
     name: 'Remedial Massage',
     price: [
-      { time: '30m', price: '$55' },
-      { time: '45m', price: '$75' },
-      { time: '60m', price: '$95' },
-      { time: '90m', price: '$140' },
-      { time: '120m', price: '$180' },
+      { time: '30m', price: '$65' },
+      { time: '45m', price: '$85' },
+      { time: '60m', price: '$105' },
+      { time: '90m', price: '$150' },
     ],
     image: remedialBg,
     description:
@@ -27,10 +26,9 @@ export const treatmentsData = [
     name: 'Relaxation Massage',
     price: [
       { time: '30m', price: '-' },
-      { time: '45m', price: '$70' },
-      { time: '60m', price: '$90' },
-      { time: '90m', price: '$130' },
-      { time: '120m', price: '$170' },
+      { time: '45m', price: '$85' },
+      { time: '60m', price: '$105' },
+      { time: '90m', price: '$150' },
     ],
     image: relaxationBg,
     description:
@@ -41,10 +39,9 @@ export const treatmentsData = [
     name: 'Deep Tissue Massage',
     price: [
       { time: '30m', price: '-' },
-      { time: '45m', price: '$70' },
-      { time: '60m', price: '$90' },
-      { time: '90m', price: '$130' },
-      { time: '120m', price: '$170' },
+      { time: '45m', price: '$85' },
+      { time: '60m', price: '$105' },
+      { time: '90m', price: '$150' },
     ],
     image: deepTissueBg,
     description:
@@ -55,10 +52,9 @@ export const treatmentsData = [
     name: 'Aromatherapy Massage',
     price: [
       { time: '30m', price: '-' },
-      { time: '45m', price: '$80' },
-      { time: '60m', price: '$100' },
-      { time: '90m', price: '$145' },
-      { time: '120m', price: '$185' },
+      { time: '45m', price: '$90' },
+      { time: '60m', price: '$110' },
+      { time: '90m', price: '$155' },
     ],
     image: aromatherapyBg,
     description:
@@ -70,9 +66,8 @@ export const treatmentsData = [
     price: [
       { time: '30m', price: '-' },
       { time: '45m', price: '-' },
-      { time: '60m', price: '$95' },
-      { time: '90m', price: '$140' },
-      { time: '120m', price: '-' },
+      { time: '60m', price: '$105' },
+      { time: '90m', price: '$150' },
     ],
     image: pregnancyBg,
     description:
@@ -84,9 +79,8 @@ export const treatmentsData = [
     price: [
       { time: '30m', price: '-' },
       { time: '45m', price: '-' },
-      { time: '60m', price: '$100' },
-      { time: '90m', price: '$145' },
-      { time: '120m', price: '$185' },
+      { time: '60m', price: '$110' },
+      { time: '90m', price: '$155' },
     ],
     image: hotStoneBg,
     description:
@@ -100,7 +94,6 @@ export const treatmentsData = [
       { time: '45m', price: '-' },
       { time: '60m', price: '$200' },
       { time: '90m', price: '$280' },
-      { time: '120m', price: '$380' },
     ],
     image: coupleBg,
     description:
@@ -111,14 +104,44 @@ export const treatmentsData = [
     name: 'Tibetan Singing Bowl Therapy Sounds Massage',
     price: [
       { time: '30m', price: '$50' },
-      { time: '45m', price: '$65' },
+      { time: '45m', price: '-' },
       { time: '60m', price: '$80' },
       { time: '90m', price: '-' },
-      { time: '120m', price: '-' },
     ],
     image: singingBowlBg,
     description:
       '<p>To put it simply, above all it is the sound and vibrations of singing bowls positioned with care on the dressed body. Gentle and harmonious sounds are absorbed and as a result, the client is quickly able to achieve a state of deep relaxation.</p><p>Besides that, the rhythmic sounds saturate the body and produce a subtle vibration which is a kind of a “massage” element.</p><p>During a sound massage, an atmosphere of safety and security is created, making it possible to let go – release stress, anxiety, worry, doubt and feelings that have a negative impact on our health.</p>',
     // Photo by Magicbowls from Pexels
+  },
+]
+
+export const facialData = [
+  {
+    id: 1,
+    name: 'Collagen',
+    price: '$180',
+    description:
+      '<p>Incorporates a collagen crystal mask which helps to metabolize facial cells, eliminate melanin, inhibit formation of skin pigment, and condition the skin while moisturizing and reducing wrinkles.</p>',
+  },
+  {
+    id: 2,
+    name: 'Purifying & Deep-Cleansing',
+    price: '$270',
+    description:
+      '<p>A deep-cleansing, exfoliation (with a gentle lactic acid peel), extraction, purifying plant extracts, and a soothing mask to calm and clarify the skin.</p>',
+  },
+  {
+    id: 3,
+    name: 'Microdermabrasion',
+    price: '$360',
+    description:
+      '<p>It lightens hyper-pigmentation and age spots, reduces fine lines and wrinkles, minimizes most stretch marks, and reduces the effects of sun damage and acne scarring.</p>',
+  },
+  {
+    id: 4,
+    name: 'Indulgent Caviar',
+    price: '$570',
+    description:
+      "<p>Infused with roe extract, marine DNA, collagen quince extract, CoQ10, and sodium hyaluronate, it'll leave your skin feeling firm.</p>",
   },
 ]
