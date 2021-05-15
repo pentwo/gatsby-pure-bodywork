@@ -321,15 +321,15 @@ const Cards = () => {
       <Card
         data={{
           name: 'Aromatherapy Massage',
-          price: '$80',
+          price: '$90',
           icon: aromaIcon,
         }}
       />
       <Card
-        data={{ name: 'Remedial Massage', price: '$55', icon: remedialIcon }}
+        data={{ name: 'Remedial Massage', price: '$65', icon: remedialIcon }}
       />
       <Card
-        data={{ name: 'Pregnancy Massage', price: '$95', icon: pregnancyIcon }}
+        data={{ name: 'Pregnancy Massage', price: '$105', icon: pregnancyIcon }}
       />
     </ContainerStyles>
   )
