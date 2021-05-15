@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = {
   siteMetadata: {
     title: 'Pure Bodywork Massage & Beauty',
@@ -15,14 +17,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /images/,
-    //     },
-    //   },
-    // },
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     {
@@ -32,6 +26,18 @@ module.exports = {
         path: `./src/images/`,
       },
       __key: 'images',
+    },
+    {
+      resolve: `gatsby-source-airtable`,
+      options: {
+        apiKey: process.env.AIRTABLE_KEY, // may instead specify via env, see below
+        tables: [
+          {
+            baseId: `appHhUzglz87PpBNn`,
+            tableName: `businessHour`,
+          },
+        ],
+      },
     },
   ],
 }
