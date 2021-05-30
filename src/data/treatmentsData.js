@@ -99,20 +99,20 @@ export const treatmentsData = [
     description:
       '<p>Treat you and a loved one to Treat you and a loved one to a couples massage. For most of us daily life if full of tasks and activities, book a couples experience today and give yourselves some much needed time together to relax and unwind.</p><p>Couple massages can be booked for you and a friend, or you and a family member to create the ultimate pampering experience. a couples massage. For most of us daily life if full of tasks and activities, book a couples experience today and give yourselves some much needed time together to relax and unwind.</p><p>Couple massages can be booked for you and a friend, or you and a family member to create the ultimate pampering experience.</p>',
   },
-  {
-    id: 8,
-    name: 'Tibetan Singing Bowl Therapy Sounds Massage',
-    price: [
-      { time: '30m', price: '$50' },
-      { time: '45m', price: '-' },
-      { time: '60m', price: '$80' },
-      { time: '90m', price: '-' },
-    ],
-    image: singingBowlBg,
-    description:
-      '<p>To put it simply, above all it is the sound and vibrations of singing bowls positioned with care on the dressed body. Gentle and harmonious sounds are absorbed and as a result, the client is quickly able to achieve a state of deep relaxation.</p><p>Besides that, the rhythmic sounds saturate the body and produce a subtle vibration which is a kind of a “massage” element.</p><p>During a sound massage, an atmosphere of safety and security is created, making it possible to let go – release stress, anxiety, worry, doubt and feelings that have a negative impact on our health.</p>',
-    // Photo by Magicbowls from Pexels
-  },
+  // {
+  //   id: 8,
+  //   name: 'Tibetan Singing Bowl Therapy Sounds Massage',
+  //   price: [
+  //     { time: '30m', price: '$50' },
+  //     { time: '45m', price: '-' },
+  //     { time: '60m', price: '$80' },
+  //     { time: '90m', price: '-' },
+  //   ],
+  //   image: singingBowlBg,
+  //   description:
+  //     '<p>To put it simply, above all it is the sound and vibrations of singing bowls positioned with care on the dressed body. Gentle and harmonious sounds are absorbed and as a result, the client is quickly able to achieve a state of deep relaxation.</p><p>Besides that, the rhythmic sounds saturate the body and produce a subtle vibration which is a kind of a “massage” element.</p><p>During a sound massage, an atmosphere of safety and security is created, making it possible to let go – release stress, anxiety, worry, doubt and feelings that have a negative impact on our health.</p>',
+  //   // Photo by Magicbowls from Pexels
+  // },
 ]
 
 export const facialData = [
