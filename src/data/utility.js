@@ -1,6 +1,7 @@
 import monicaAvatar from '../images/avatar-monica.png'
 
 export const note = {
+  available: false,
   text: 'Refer a friend a Massage for $20 off both yourself and your friend.',
   link:
     'https://www.facebook.com/purebodywork.au/photos/a.2224374394508748/2957156024563911/',

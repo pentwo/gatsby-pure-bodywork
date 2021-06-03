@@ -9,6 +9,7 @@ import { ReactComponent as InstagramIcon } from '../images/icons/instagram-logo.
 import Nav from './Nav'
 import logo from '../images/logo.png'
 import Notification from './Notification'
+import { note } from '../data/utility'
 
 const HeaderStyles = styled.header`
   padding: 2rem 0 0 0;
@@ -92,7 +93,7 @@ export default function Header(props) {
   return (
     <>
       <HeaderStyles className={navAct ? 'active' : ''}>
-        {/* <Notification /> */}
+        {note.available ? <Notification /> : ''}
         <div className="wrapper">
           <div className={`logo ${navAct ? 'active' : ''}`}>
             <Link to="/">
