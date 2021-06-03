@@ -179,7 +179,7 @@ const Nav = () => {
         <li className="option">
           <a href="tel:+61892211188">(08) 9221 1188</a>
         </li>
-        <li className="option">
+        <li className="option" onClick={closeMobileMenu}>
           <Link to="/booking">
             <button>Book now</button>
           </Link>
