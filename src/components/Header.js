@@ -92,7 +92,7 @@ export default function Header(props) {
   return (
     <>
       <HeaderStyles className={navAct ? 'active' : ''}>
-        <Notification />
+        {/* <Notification /> */}
         <div className="wrapper">
           <div className={`logo ${navAct ? 'active' : ''}`}>
             <Link to="/">
