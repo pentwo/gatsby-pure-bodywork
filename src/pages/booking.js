@@ -78,6 +78,7 @@ const BookingPage = () => {
             <h4>Booking with {practitioner ? practitioner : '...'}</h4>
             <div className="name-tags">
               {members.map(member => {
+                if(member.id===0) return (<></>)
                 return (
                   <div
                     className={
