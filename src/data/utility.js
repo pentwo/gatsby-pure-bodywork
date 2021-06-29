@@ -36,14 +36,14 @@ export const members = [
   },
   {
     id: 0,
-    name: 'Megumi',
+    name: 'Megumi Matsumura',
     avatarImage: megumiAvatar,
     description:
-      'I am Megumi, I\'m prides myself in providing quality treatment and customised support in each client’s health care plan.',
+      "I am Megumi, I'm prides myself in providing quality treatment and customised support in each client’s health care plan.",
     fullDescription:
-      "<p>Megumi is a registered remedial massage therapist. She has been working in both an acupuncture clinic in TAS and private practice with experience treating a wide range of clients with deep tissue massage, myofascial release with cupping, trigger point and stretching.<p>Her special interest is posture management in particular with elderly clients. She has added a dry needling certificate to her treatment repertoire and uses myofascial cupping techniques and uses a holistic approach in order to improve both physical and emotional wellbeing where body function as a whole is of importance.</p><p>Megumi prides herself in providing quality treatment and customised support in each client’s health care plan.</p><h5>Qualification Details</h5>",
-    booking:
-      '',
+      '<p>Megumi is a registered remedial massage therapist. She has been working in both an acupuncture clinic in TAS and private practice with experience treating a wide range of clients with deep tissue massage, Myofascial release with cupping, trigger point and stretching.<p>Her special interest is posture management in particular with elderly clients. She has added a dry needling certificate to her treatment repertoire and uses Myofascial cupping techniques and uses a holistic approach in order to improve both physical and emotional wellbeing where body function as a whole is of importance.</p><p>Megumi prides herself in providing quality treatment and customised support in each client’s health care plan.</p><h5>Qualification Details</h5><ul><li>CIBTAC Beautician Diploma</li><li>CIDESCO Beauty Therapy Diploma</li><li>Diploma of Beauty Therapy</li><li>Diploma of Hairdresser</li><li>Diploma of Remedial Massage</li> </ul>',
+
+    booking: '',
   },
   // {
   //   id: 160950,
