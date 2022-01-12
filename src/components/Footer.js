@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 
 import styled from 'styled-components'
 import { AiFillPhone, AiFillMail } from 'react-icons/ai'
 import { Link } from 'gatsby'
+
+import { businessHour } from '../data/utility'
 
 const FooterStyles = styled.div`
   padding: 3rem 10vw;
@@ -68,40 +69,19 @@ const FooterStyles = styled.div`
 `
 
 export default function Footer() {
-  const airtableBusinessHour = useStaticQuery(graphql`
-    query GetHours {
-      allAirtable(filter: { table: { eq: "businessHour" } }) {
-        edges {
-          node {
-            table
-            data {
-              day
-              hour
-              id
-            }
-          }
-        }
-      }
-    }
-  `)
-
-  const hour = airtableBusinessHour.allAirtable.edges
-
   return (
     <FooterStyles>
       <div className="hours">
         <h5>Business Hours</h5>
         <ul>
-          {hour
-            ?.sort((a, b) => a.node.data.id - b.node.data.id)
-            .map(item => {
-              return (
-                <li key={item.node.data.day}>
-                  <span className="day">{item.node.data.day}</span>
-                  <span className="hour">{item.node.data.hour}</span>
-                </li>
-              )
-            })}
+          {businessHour.map(item => {
+            return (
+              <li key={item.day}>
+                <span className="day">{item.day}</span>
+                <span className="hour">{item.hour}</span>
+              </li>
+            )
+          })}
         </ul>
       </div>
 
