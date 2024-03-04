@@ -13,9 +13,9 @@ export const BOOKING_URL =
 export const businessHour = [
     { day: "Monday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
     { day: "Tuesday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
-    { day: "Wednesday", hour: "09:30 - 16:00", note: "(East Clinic)" },
+    { day: "Wednesday", hour: "09:30 - 16:00", note: "(East Perth Clinic)" },
     { day: "Thursday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
-    { day: "Friday", hour: "09:30 - 16:00", note: "(East Clinic)" },
+    { day: "Friday", hour: "09:30 - 16:00", note: "(East Perth Clinic)" },
     { day: "Saturday", hour: "09:30 - 11:30", note: "(Maylands Home Clinic)" },
     { day: "Sunday", hour: "14:00 - 18:00", note: "(Fortnightly)" },
     { day: "Public Holiday", hour: "Close" },
