@@ -77,7 +77,7 @@ export default function Footer() {
           {businessHour.map(item => {
             return (
               <li key={item.day}>
-                <span className="day">{item.day}</span>
+                <span className="day">{item.day} {item.note}</span>
                 <span className="hour">{item.hour}</span>
               </li>
             )
