@@ -1,0 +1,20 @@
+<svg viewBox="0 0 128 128" width="512" height="512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Singing bowl body -->
+  <ellipse cx="64" cy="90" rx="40" ry="12" fill="#ffe082"/>
+  <path d="M24 90 C24 90 24 60 40 50 C48 45 56 43 64 43 C72 43 80 45 88 50 C104 60 104 90 104 90" fill="#ffecb3" stroke="#ffe082" stroke-width="2"/>
+  <ellipse cx="64" cy="90" rx="40" ry="12" fill="none" stroke="#ffe082" stroke-width="2"/>
+  <!-- Inner rim -->
+  <ellipse cx="64" cy="52" rx="28" ry="8" fill="#ffecb3" stroke="#ffe082" stroke-width="2"/>
+  <!-- Mallet/striker -->
+  <line x1="90" y1="30" x2="72" y2="52" stroke="#ffe082" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="93" cy="27" r="5" fill="#ffe082"/>
+  <!-- Sound waves -->
+  <path d="M30 35 C25 30 25 22 30 17" fill="none" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M22 38 C14 30 14 18 22 10" fill="none" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M98 35 C103 30 103 22 98 17" fill="none" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M106 38 C114 30 114 18 106 10" fill="none" stroke="#ffe082" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Small energy dots -->
+  <circle cx="44" cy="12" r="2" fill="#ffe082"/>
+  <circle cx="64" cy="8" r="2" fill="#ffe082"/>
+  <circle cx="84" cy="12" r="2" fill="#ffe082"/>
+</svg>

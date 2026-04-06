@@ -5,6 +5,7 @@ import SEO from '../components/SEO'
 
 import { treatmentsData, addOnsData } from '../data/treatmentsData'
 import remedialIcon from '../images/icons/massage.svg'
+import soundHealingIcon from '../images/icons/sound-healing.svg'
 
 import { Link } from 'gatsby'
 
@@ -406,7 +407,7 @@ const Cards = () => {
         data={{ name: 'Remedial Massage', price: '$120', icon: remedialIcon }}
       />
       <Card
-        data={{ name: 'Sound Healing / Reiki', price: '$130' }}
+        data={{ name: 'Sound Healing / Reiki', price: '$130', icon: soundHealingIcon }}
       />
     </ContainerStyles>
   )
