@@ -1,13 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import bg from '../images/room-1.jpeg'
+import bg from '../images/v2-images/treatment-room-1.jpg'
 import { BsArrowRight } from 'react-icons/bs'
 import Slider from 'react-slick'
 
-import hero1 from '../images/room-3.jpg'
-import hero2 from '../images/reception-1.jpg'
-import hero3 from '../images/room-4.jpg'
-import hero4 from '../images/street-view.jpeg'
+import hero1 from '../images/v2-images/treatment-room-1.jpg'
+import hero2 from '../images/v2-images/healing-tools-display.jpg'
+import hero3 from '../images/v2-images/treatment-room-ambience.jpg'
+import hero4 from '../images/v2-images/reiki-healing-display.jpg'
+import hero5 from '../images/v2-images/crystal-singing-bowls.jpg'
 
 const sliderSettings = {
   dots: true,
@@ -49,6 +50,7 @@ function Hero() {
         <SliderStyles className="slider-image" bg={hero2} />
         <SliderStyles className="slider-image" bg={hero3} />
         <SliderStyles className="slider-image" bg={hero4} />
+        <SliderStyles className="slider-image" bg={hero5} />
       </Slider>
     </HeroStyles>
   )

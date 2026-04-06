@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { navigate } from 'gatsby-link'
+import { navigate } from 'gatsby'
 import { AiFillPhone, AiFillMail } from 'react-icons/ai'
 
 import { PageHero } from '../components/Hero'

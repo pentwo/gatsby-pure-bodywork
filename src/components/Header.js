@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 import { Link } from 'gatsby'
 
-import { ReactComponent as FacebookIcon } from '../images/icons/facebook-logo.svg'
-import { ReactComponent as InstagramIcon } from '../images/icons/instagram-logo.svg'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 import Nav from './Nav'
 import logo from '../images/logo.png'
@@ -105,7 +104,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <FacebookIcon />
+                <FaFacebookF />
               </a>
 
               <a
@@ -113,7 +112,7 @@ export default function Header(props) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                <InstagramIcon />
+                <FaInstagram />
               </a>
             </div>
           </div>

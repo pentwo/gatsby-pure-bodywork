@@ -8,16 +8,13 @@ export const note = {
 };
 
 export const BOOKING_URL =
-    "https://perthhealthcare.au1.cliniko.com/bookings?business_id=74448&practitioner_id=159109";
+    "https://app.acuityscheduling.com/schedule/fbf64d5a";
 
 export const businessHour = [
-    { day: "Monday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
-    { day: "Tuesday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
-    { day: "Wednesday", hour: "09:30 - 16:00", note: "(East Perth Clinic)" },
-    { day: "Thursday", hour: "10:00 - 16:00", note: "(Maylands Home Clinic)" },
-    { day: "Friday", hour: "09:30 - 16:00", note: "(East Perth Clinic)" },
-    { day: "Saturday", hour: "09:30 - 11:30", note: "(Maylands Home Clinic)" },
-    { day: "Sunday", hour: "14:00 - 18:00", note: "(Fortnightly)" },
+    { day: "Monday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
+    { day: "Tuesday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
+    { day: "Friday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
+    { day: "Alternate Weekends", hour: "By appointment", note: "(Urban OM Yoga Studio, East Perth)" },
     { day: "Public Holiday", hour: "Close" },
 ];
 
@@ -30,7 +27,7 @@ export const members = [
             "I am passionate about helping others to improve their well-being by offering relaxing and rejuvenating treatments that nurture the self and lead to long term health solutions.",
         fullDescription:
             "<p>Monica's career in massage began in 2008,  she is enthusiastic and passionate about all things massage therapy.</p><p>Having studied vastly in the field, her amazing hands-on massage techniques combined with her Chinese Medicine understanding of the body makes her a Remedial Massage Therapist you can trust.</p><p>She has expertise in remedial massage, deep tissue massage, pregnancy massage, trigger point therapy, swedish massage, cupping and beauty therapy.</p><h5>Qualification Details</h5><ul><li>Massage association of Austalia</li><li>Diploma of Remedial Massage</li><li>Reiki First degree</li><li>Tibatan Singing bowl sounds therapy Level One & Two</li><li>NAHA Certified Professional Aromatherapist Level 2</li><li>First aid – Level 2</li></ul>",
-        booking: "https://perthhealthcare.au1.cliniko.com/bookings?practitioner_id=159109",
+        booking: "https://app.acuityscheduling.com/schedule/fbf64d5a",
     },
     // {
     //   id: 164714,

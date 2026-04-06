@@ -28,12 +28,12 @@ export default function Location() {
       <div className="wrapper">
         <h3 className="center">Location</h3>
         <div className="address center">
-          <address>125 Royal Street, East Perth WA 6004</address>
-          <small>(Located within Perth Healthcare Certre)</small>
+          <address>42 Bennett St, East Perth WA 6004</address>
+          <small>(Located within Urban OM Yoga Studio)</small>
         </div>
         <div className="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.2905486118393!2d115.87243435184001!3d-31.95301352951979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2bcd579c983e6cb1%3A0x770e6a6a926626cd!2sPure%20Bodywork%20Massage%20%26%20Beauty!5e0!3m2!1sen!2sau!4v1614394945411!5m2!1sen!2sau"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.3!2d115.872!3d-31.953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32bad5e0ae4d3b%3A0x5e5e5e5e5e5e5e5e!2s42%20Bennett%20St%2C%20East%20Perth%20WA%206004!5e0!3m2!1sen!2sau!4v1700000000000!5m2!1sen!2sau"
             title="google map"
             style={{ border: 0, width: '100%', height: '350px' }}
             loading="lazy"

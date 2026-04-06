@@ -7,14 +7,8 @@ module.exports = {
     description: 'A tranquil experience through our caring hands'
   },
   plugins: [
-    'gatsby-plugin-svgr',
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'G-1EM087JR2X'
-      }
-    },
+    'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sitemap',

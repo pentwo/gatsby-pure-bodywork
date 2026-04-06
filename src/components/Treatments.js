@@ -3,8 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 import remedialBg from '../images/background/pexels-anete-lusina-5240643.jpg'
-import pregnancyBg from '../images/treatments/pexels-leah-kelley-618923.jpg'
-import aromatherapyBg from '../images/treatments/pexels-rodnae-productions-6724507.jpg'
+import singingBowlBg from '../images/singing-bowl-1.jpeg'
 
 const TreatmentsStyles = styled.section`
   display: flex;
@@ -121,31 +120,11 @@ export const Treatments = () => {
 
 const data = [
   {
-    name: 'Pregnancy Massage',
-    background: pregnancyBg,
-  },
-  {
     name: 'Remedial Massage',
     background: remedialBg,
   },
   {
-    name: 'Aromatherapy Massage',
-    background: aromatherapyBg,
+    name: 'Sound Healing / Reiki',
+    background: singingBowlBg,
   },
-  // {
-  //   name: 'Deep Tissue Massage',
-  //   icon: `${deepTissueIcon}`,
-  // },
-  // {
-  //   name: 'Relaxation Massage',
-  // },
-  // {
-  //   name: 'Hot Stone Massage',
-  // },
-  // {
-  //   name: 'Tibetan Singing Bowl Therapy Sounds Massage',
-  // },
 ]
-
-// Photo by RODNAE Productions from Pexels
-// Photo by Leah Kelley from Pexels

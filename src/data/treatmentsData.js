@@ -12,24 +12,18 @@ export const treatmentsData = [
     id: 1,
     name: 'Remedial Massage',
     price: [
-      { time: '30m', price: '$65' },
-      { time: '45m', price: '$85' },
-      { time: '60m', price: '$105' },
-      { time: '90m', price: '$150' },
+      { time: '60m', price: '$120' },
+      { time: '75m', price: '$150' },
+      { time: '90m', price: '$180' },
+      { time: '120m', price: '$240' },
     ],
     image: remedialBg,
     description:
-      '<p>Remedial massage therapy is a massage based application used to treat a number of conditions affecting the muscles, tendons, and ligaments of the body.</p><p>This holistic treatment helps to restore the balance between muscles and the skeletal system to allow your body to function at its optimal level, with less discomfort. Your Remedial Therapist will assess any underlying causes and develop a treatment plan.</p><p>You may also be able to claim this treatment on your health fund. Please confirm your Health Fund at the time of booking.</p>',
+      '<p>Remedial massage therapy is a massage based application used to treat a number of conditions affecting the muscles, tendons, and ligaments of the body.</p><p>This holistic treatment helps to restore the balance between muscles and the skeletal system to allow your body to function at its optimal level, with less discomfort. Your Remedial Therapist will assess any underlying causes and develop a treatment plan.</p><p>75-minute consultation is recommended for your first visit. All remedial massage services are eligible for private health insurance rebates.</p>',
   },
   {
     id: 2,
     name: 'Relaxation Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '$85' },
-      { time: '60m', price: '$105' },
-      { time: '90m', price: '$150' },
-    ],
     image: relaxationBg,
     description:
       '<p>Relaxation massage is recommended for people who prefer soft and light pressure in their massage session. You can ask the massage therapist to adjust the pressure to your liking.</p> <p>This gentle and smooth massage combines the most relaxing elements of Swedish and Eastern massage techniques.</p><p>Relax with soothing massage techniques performed by a qualified therapist, designed to create a deep sense of relaxation, relieve tension and soothe your fatigued body and mind.</p>',
@@ -37,12 +31,6 @@ export const treatmentsData = [
   {
     id: 3,
     name: 'Deep Tissue Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '$85' },
-      { time: '60m', price: '$105' },
-      { time: '90m', price: '$150' },
-    ],
     image: deepTissueBg,
     description:
       "<p>Deep tissue massage is a massage technique that's mainly used to treat musculoskeletal issues, such as strains and sports injuries.</p><p>It involves applying sustained pressure using slow, deep strokes to target the inner layers of your muscles and connective tissues.</p><p>You can ask the massage therapist to adjust the pressure to your liking.</p>",
@@ -50,12 +38,6 @@ export const treatmentsData = [
   {
     id: 4,
     name: 'Aromatherapy Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '$90' },
-      { time: '60m', price: '$110' },
-      { time: '90m', price: '$155' },
-    ],
     image: aromatherapyBg,
     description:
       '<p>Aroma Massaged addresses numerous physical and emotional concerns.</p><p>Your massage therapist will decide which essential oils to use, but you can let them know if you have a preference.</p><p>Essential oils have the ability to attend to all your mental, emotional, and physical needs. They can help restore you to a state of overall well-being.</p>',
@@ -63,12 +45,6 @@ export const treatmentsData = [
   {
     id: 5,
     name: 'Pregnancy Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '-' },
-      { time: '60m', price: '$105' },
-      { time: '90m', price: '$150' },
-    ],
     image: pregnancyBg,
     description:
       '<p>Your pregnancy massage qualified therapist will customise this treatment to your needs, helping to relieve tension, calm your mind, and melt away individual aches and pains.</p><p>Throughout the massage our special pregnancy massage table and pillow will support your hips and joints, allowing you to relax and enjoy this nourishing treatment with extra cushioning and comfort.</p><p>Your appointment includes a professional consultation to understand your specific needs and concerns to be addressed throughout your treatment.</p>',
@@ -76,12 +52,6 @@ export const treatmentsData = [
   {
     id: 6,
     name: 'Hot Stone Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '-' },
-      { time: '60m', price: '$110' },
-      { time: '90m', price: '$155' },
-    ],
     image: hotStoneBg,
     description:
       "<p>A hot stone massage is a type of massage therapy. It's used to help you relax and ease tense muscles and damaged soft tissues throughout your body.</p><p>Our massage therapist holds the stones in their hands and uses them to massage with. This allows the therapist to get deeper into the muscles without more pressure, helping their client to relax yet further.</p><p>During a hot stone massage, smooth, flat, heated stones are placed on specific parts of your body.</p>",
@@ -89,59 +59,29 @@ export const treatmentsData = [
   {
     id: 7,
     name: 'Couple Massage',
-    price: [
-      { time: '30m', price: '-' },
-      { time: '45m', price: '-' },
-      { time: '60m', price: '$200' },
-      { time: '90m', price: '$280' },
-    ],
     image: coupleBg,
     description:
-      '<p>Treat you and a loved one to Treat you and a loved one to a couples massage. For most of us daily life if full of tasks and activities, book a couples experience today and give yourselves some much needed time together to relax and unwind.</p><p>Couple massages can be booked for you and a friend, or you and a family member to create the ultimate pampering experience. a couples massage. For most of us daily life if full of tasks and activities, book a couples experience today and give yourselves some much needed time together to relax and unwind.</p><p>Couple massages can be booked for you and a friend, or you and a family member to create the ultimate pampering experience.</p>',
+      '<p>Treat you and a loved one to a couples massage. For most of us daily life is full of tasks and activities, book a couples experience today and give yourselves some much needed time together to relax and unwind.</p><p>Couple massages can be booked for you and a friend, or you and a family member to create the ultimate pampering experience.</p>',
   },
-  // {
-  //   id: 8,
-  //   name: 'Tibetan Singing Bowl Therapy Sounds Massage',
-  //   price: [
-  //     { time: '30m', price: '$50' },
-  //     { time: '45m', price: '-' },
-  //     { time: '60m', price: '$80' },
-  //     { time: '90m', price: '-' },
-  //   ],
-  //   image: singingBowlBg,
-  //   description:
-  //     '<p>To put it simply, above all it is the sound and vibrations of singing bowls positioned with care on the dressed body. Gentle and harmonious sounds are absorbed and as a result, the client is quickly able to achieve a state of deep relaxation.</p><p>Besides that, the rhythmic sounds saturate the body and produce a subtle vibration which is a kind of a “massage” element.</p><p>During a sound massage, an atmosphere of safety and security is created, making it possible to let go – release stress, anxiety, worry, doubt and feelings that have a negative impact on our health.</p>',
-  //   // Photo by Magicbowls from Pexels
-  // },
+  {
+    id: 8,
+    name: 'Sound Healing / Reiki',
+    price: [
+      { time: '60m', price: '$130' },
+    ],
+    image: singingBowlBg,
+    description:
+      '<p>Experience deep relaxation through the healing vibrations of singing bowls and gongs. This 60-minute session combines sound healing and Reiki energy work to calm the mind, release tension, and restore balance to your body and spirit.</p>',
+  },
 ]
 
-export const facialData = [
-  {
-    id: 1,
-    name: 'Collagen',
-    price: '$180',
-    description:
-      '<p>Incorporates a collagen crystal mask which helps to metabolize facial cells, eliminate melanin, inhibit formation of skin pigment, and condition the skin while moisturizing and reducing wrinkles.</p>',
-  },
-  {
-    id: 2,
-    name: 'Purifying & Deep-Cleansing',
-    price: '$270',
-    description:
-      '<p>A deep-cleansing, exfoliation (with a gentle lactic acid peel), extraction, purifying plant extracts, and a soothing mask to calm and clarify the skin.</p>',
-  },
-  {
-    id: 3,
-    name: 'Microdermabrasion',
-    price: '$360',
-    description:
-      '<p>It lightens hyper-pigmentation and age spots, reduces fine lines and wrinkles, minimizes most stretch marks, and reduces the effects of sun damage and acne scarring.</p>',
-  },
-  {
-    id: 4,
-    name: 'Indulgent Caviar',
-    price: '$570',
-    description:
-      "<p>Infused with roe extract, marine DNA, collagen quince extract, CoQ10, and sodium hyaluronate, it'll leave your skin feeling firm.</p>",
-  },
+export const addOnsData = [
+  { name: 'Digestive Support Abdominal Massage', price: '$55', time: '20m' },
+  { name: 'Facial Sculpting Massage (Gua-Sha & Cupping)', price: '$55', time: '20m' },
+  { name: 'Head & Scalp Massage', price: '$55', time: '20m' },
+  { name: 'Sound Flow & Energy Touch', price: '$55', time: '20m' },
+  { name: 'Leg Relief Massage', price: '$55', time: '20m' },
+  { name: 'Womb Warming Abdominal Massage', price: '$55', time: '20m' },
+  { name: 'Hot Stone Upgrade', price: '$20', time: '' },
+  { name: 'Pregnancy Comfort Upgrade', price: '$20', time: '' },
 ]
