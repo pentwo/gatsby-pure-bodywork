@@ -1,336 +1,310 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'gatsby'
+
 import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
-import { treatmentsData } from '../data/treatmentsData'
-import remedialIcon from '../images/icons/massage.svg'
-import aromaIcon from '../images/icons/aroma.svg'
-import pregnancyIcon from '../images/icons/mother.svg'
+import { treatmentsData, addOnData } from '../data/treatmentsData'
 
-import { Link } from 'gatsby'
+const PageWrap = styled.main`
+  background: var(--cream);
+`
 
-const tableHeader = ['Treatments']
+const Intro = styled.section`
+  padding: 4rem 3rem 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
 
-export default function PricePage() {
-  return (
-    <>
-      <main>
-        <SEO title="Price"></SEO>
+  p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 2rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+`
 
-        <PageHero title="Price" />
-        <div className="wrapper-column">
-          <Cards />
-          <h2 className="center">Price List</h2>
-          <Table
-            header={[
-              ...tableHeader,
-              ...treatmentsData[0].price.map(i => i.time),
-            ]}
-            data={treatmentsData}
-          />
-          <p style={{ marginBottom: '3rem' }}>
-            <span className="mark">
-              *Please not a surcharge $5 will be added to all the treatments
-              Sunday and Public Holiday
-            </span>
-          </p>
-          <h3 className="center">Cancellation Policy</h3>
-          <p>
-            If you cancel/reschedule or do not attend your appointment without
-            providing 24 hrs notice, a fee of $50 will be charged.
-          </p>
-        </div>
-      </main>
-    </>
-  )
-}
+const PriceList = styled.section`
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 0 3rem 4rem;
 
-const TableStyles = styled.div`
-  margin: 0 0 1rem 0;
-  width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
-  display: table;
+  .treatment {
+    border-top: 1px solid rgba(31, 31, 31, 0.12);
+    padding: 4rem 0;
 
-  @media (max-width: 640px) {
-    display: block;
+    &:last-child {
+      border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+    }
+  }
+
+  .treatment-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    h3 {
+      font-family: 'Italiana', serif;
+      font-size: clamp(2.6rem, 1.5rem + 1.8vw, 3.6rem);
+      margin: 0;
+      color: var(--ink);
+    }
+
+    .from {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+  }
+
+  .tiers {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .tier {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1rem 0;
+    border-bottom: 1px dashed rgba(31, 31, 31, 0.08);
+    gap: 2rem;
+
+    &:last-child { border-bottom: none; }
+
+    .time {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.7rem;
+      color: var(--ink-soft);
+    }
+
+    .price {
+      font-family: 'Italiana', serif;
+      font-size: 2rem;
+      color: var(--ink);
+      letter-spacing: 0.04em;
+    }
+  }
+`
+
+const AddOnSection = styled.section`
+  background: var(--cream-soft);
+  padding: 6rem 0;
+
+  .wrap {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 3rem;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    h3 {
+      font-family: 'Italiana', serif;
+      font-size: clamp(2.6rem, 1.5rem + 1.8vw, 3.6rem);
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.7rem;
+      color: var(--ink-soft);
+    }
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(31, 31, 31, 0.12);
+
+    @media (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .row {
-    display: table-row;
-    background: #f6f6f6;
-    &:nth-of-type(odd) {
-      background: var(--light);
-    }
-    &.header {
-      font-weight: 900;
-      color: var(--white);
-      background: var(--dark);
-    }
-    &:not(:nth-of-type(1)) {
-      :hover {
-        background: var(--purple);
-      }
-    }
-  }
-  @media (max-width: 640px) {
-    .row {
-      padding: 1.5rem 0 1rem;
-      display: block;
-      &.header {
-        padding: 0;
-        height: 0.5rem;
-      }
-      &.header .cell {
-        display: none;
-      }
-      .cell {
-        margin-bottom: 10px;
-      }
-      .cell:before {
-        margin-bottom: 3px;
-        content: attr(data-title);
-        min-width: 98px;
-        font-size: 1.2rem;
-        line-height: 1.2rem;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: var(--dark);
-        display: block;
-      }
-    }
-  }
-
-  .cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1.5rem 1.5rem;
-    display: table-cell;
-  }
-  @media (max-width: 640px) {
-    .cell {
-      font-size: 2rem;
-      padding: 0.5rem 2rem;
-      display: block;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.08);
+
+    .name {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.7rem;
+      color: var(--ink-soft);
+    }
+
+    .meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: baseline;
+
+      .duration {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .price {
+        font-family: 'Italiana', serif;
+        font-size: 1.8rem;
+        color: var(--ink);
+      }
     }
   }
 `
 
-const Table = ({ header, data }) => {
+const Policy = styled.section`
+  padding: 5rem 3rem;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+
+  .eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+
+  h4 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(2.4rem, 1.5rem + 1.5vw, 3rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+`
+
+const CTA = styled.section`
+  background: var(--sage);
+  color: var(--cream);
+  padding: 6rem 3rem;
+  text-align: center;
+
+  h3 {
+    font-family: 'Italiana', serif;
+    font-size: clamp(2.8rem, 2rem + 2vw, 4rem);
+    color: var(--cream);
+    margin-bottom: 2.5rem;
+  }
+`
+
+export default function PricePage() {
   return (
-    <TableStyles>
-      <div className="row header">
-        {header.map(i => (
-          <div className="cell" key={`header-${i}`}>
-            {i}
+    <PageWrap>
+      <SEO title="Price" />
+      <PageHero title="Price" eyebrow="Investment" />
+
+      <Intro>
+        <p>
+          A clear, simple guide to our offerings — to help you choose the
+          treatment that's <em>right for you</em>.
+        </p>
+      </Intro>
+
+      <PriceList>
+        {treatmentsData.map(treatment => (
+          <div className="treatment" key={treatment.id}>
+            <div className="treatment-head">
+              <h3>{treatment.name}</h3>
+              <span className="from">
+                From {treatment.price.find(p => p.price !== '-')?.price}
+              </span>
+            </div>
+            <ul className="tiers">
+              {treatment.price
+                .filter(p => p.price !== '-')
+                .map(p => (
+                  <li className="tier" key={p.time}>
+                    <span className="time">{p.time}</span>
+                    <span className="price">{p.price}</span>
+                  </li>
+                ))}
+            </ul>
           </div>
         ))}
-      </div>
-      {data.map((treatment, index) => (
-        <div className="row" key={`${treatment.name}-${index}`}>
-          <div className="cell" data-title="treatment">
-            {treatment.name}
+      </PriceList>
+
+      <AddOnSection>
+        <div className="wrap">
+          <div className="header">
+            <span className="eyebrow">Enhance your treatment</span>
+            <h3>Add-on services</h3>
+            <p>
+              Twenty-minute additions to extend or focus your session.
+            </p>
           </div>
-          {treatment.price.map(i => {
-            return (
-              <div
-                className="cell"
-                data-title={i.time}
-                key={`${treatment.name}-${i.time}`}
-              >
-                {i.price}
+          <div className="grid">
+            {addOnData.map(item => (
+              <div className="row" key={item.id}>
+                <span className="name">{item.name}</span>
+                <div className="meta">
+                  <span className="duration">{item.duration}</span>
+                  <span className="price">{item.price}</span>
+                </div>
               </div>
-            )
-          })}
-        </div>
-      ))}
-    </TableStyles>
-  )
-}
-
-const ContainerStyles = styled.div`
-  margin: 7rem 0;
-
-  display: grid;
-  grid-template-columns: repeat(3, minmax(220px, 285px));
-  grid-template-rows: auto auto auto 2fr;
-  justify-content: space-between;
-  gap: 2rem;
-
-  @media (max-width: 640px) {
-    grid-template-columns: repeat(1, 100%);
-    gap: 3rem;
-  }
-`
-const CardStyles = styled.div`
-  text-align: center;
-  position: relative;
-  max-width: 300px;
-  height: auto;
-
-  border-radius: 15px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
-  transition: 0.5s;
-
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: 1 / -1;
-
-  @media (max-width: 640px) {
-    padding: 2rem 1rem;
-    max-width: 75vw;
-    grid-template-columns: 1fr 1fr 0;
-    grid-template-rows: auto;
-    grid-row: unset;
-    gap: 2rem;
-    align-items: center;
-
-    :nth-child(1) {
-    }
-    :nth-child(2) {
-    }
-    :nth-child(3) {
-    }
-  }
-
-  :hover {
-    transform: scale(1.1);
-  }
-  :nth-child(1) {
-    background: linear-gradient(-45deg, var(--light), var(--success));
-  }
-  :nth-child(2) {
-    background: linear-gradient(-45deg, var(--light), var(--purple));
-  }
-  :nth-child(3) {
-    background: linear-gradient(-45deg, var(--light), var(--warning));
-  }
-
-  .title {
-    .icon {
-      top: 0;
-      left: 0;
-      width: 128px;
-      height: 128px;
-
-      filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
-    }
-
-    h2 {
-      position: relative;
-      margin: 2rem 0 1rem;
-      padding: 0;
-      color: var(--black);
-      font-size: 3rem;
-      z-index: 2;
-    }
-    @media (max-width: 640px) {
-      .icon {
-        width: 64px;
-        height: 64px;
-      }
-      h2 {
-        font-size: 2.5rem;
-      }
-    }
-  }
-  .price,
-  .option {
-    /* position: relative; */
-    /* z-index: 2; */
-  }
-  .price {
-    h4 {
-      margin: 0;
-      padding: 20px 0;
-
-      color: var(--black);
-      font-size: 6rem;
-    }
-    h5 {
-      color: var(--black);
-      margin: 0;
-    }
-    @media (max-width: 640px) {
-      h4 {
-        padding: 20px 0 0 0;
-      }
-    }
-  }
-
-  .option ul {
-    margin: 0;
-    padding: 0;
-    @media (max-width: 640px) {
-      display: none;
-    }
-  }
-  .option ul li {
-    margin: 0 0 10px;
-    padding: 0;
-    list-style: none;
-    color: var(--black);
-    font-size: 16px;
-  }
-  a {
-    @media (max-width: 640px) {
-      grid-column: 1 / -1;
-    }
-  }
-  button {
-    font-size: 2.5rem;
-    @media (max-width: 640px) {
-      font-size: 1.5rem;
-      grid-column: 1 / -1;
-    }
-  }
-`
-
-const Card = ({ data }) => {
-  return (
-    <CardStyles className="card">
-      <div className="title">
-        <img className="icon" src={data.icon} alt="" />
-        <h2>{data.name}</h2>
-      </div>
-      <div className="price">
-        <h5>Starting from</h5>
-        <h4>{data.price}</h4>
-      </div>
-      {data.option ? (
-        <div className="option">
-          <ul>
-            {data.option.map(i => (
-              <li>{i}</li>
             ))}
-          </ul>
+          </div>
         </div>
-      ) : (
-        ''
-      )}
-      <Link to="/booking">
-        <button>BOOK NOW</button>
-      </Link>
-    </CardStyles>
-  )
-}
+      </AddOnSection>
 
-const Cards = () => {
-  return (
-    <ContainerStyles>
-      <Card
-        data={{
-          name: 'Aromatherapy Massage',
-          price: '$90',
-          icon: aromaIcon,
-        }}
-      />
-      <Card
-        data={{ name: 'Remedial Massage', price: '$65', icon: remedialIcon }}
-      />
-      <Card
-        data={{ name: 'Pregnancy Massage', price: '$105', icon: pregnancyIcon }}
-      />
-    </ContainerStyles>
+      <Policy>
+        <span className="eyebrow">Please note</span>
+        <h4>Cancellation policy</h4>
+        <p>
+          If you cancel, reschedule or do not attend your appointment without
+          providing 24 hours' notice, a fee of <em>$50</em> will be charged.
+        </p>
+      </Policy>
+
+      <CTA>
+        <h3>Ready when you are</h3>
+        <Link
+          className="link-cta"
+          to="/booking"
+          style={{ color: 'var(--cream)', borderColor: 'var(--cream)' }}
+        >
+          Book your appointment
+        </Link>
+      </CTA>
+    </PageWrap>
   )
 }

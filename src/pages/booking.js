@@ -1,139 +1,201 @@
 import * as React from 'react'
-import { useState } from 'react'
 import styled from 'styled-components'
 import { PageHero } from '../components/Hero'
 import SEO from '../components/SEO'
 
-import { members } from '../data/utility'
+import { LOCATIONS } from '../data/utility'
 
 const BookingStyles = styled.div`
-  padding-bottom: 3rem;
+  padding: 4rem 0 6rem;
 
-  .name-tags {
-    display: flex;
+  .intro {
+    max-width: 640px;
+    margin: 0 auto 5rem;
+    padding: 0 3rem;
+    text-align: center;
 
+    p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+  }
+
+  .location-block {
+    max-width: 1100px;
+    margin: 0 auto 6rem;
+    padding: 0 3rem;
+  }
+
+  .location-header {
+    text-align: center;
     margin-bottom: 3rem;
-    .tag {
-      display: flex;
+
+    .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      font-family: 'Italiana', serif;
+      font-size: clamp(3rem, 2rem + 2.5vw, 4.6rem);
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+    .venue {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.8rem;
+      color: var(--ink-soft);
+      margin-bottom: 0.5rem;
+    }
+    .address {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      color: var(--muted);
+      a {
+        color: var(--muted);
+        text-decoration: underline;
+        text-decoration-color: var(--sage);
+      }
+    }
+    .hours {
+      margin-top: 1.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.2rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+  }
+
+  .iframe-wrap {
+    border: 1px solid rgba(31, 31, 31, 0.1);
+    background: var(--cream-soft);
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+  }
+
+  .external-card {
+    background: var(--sage);
+    color: var(--cream);
+    padding: 5rem 3rem;
+    text-align: center;
+
+    p {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.8rem;
+      max-width: 50ch;
+      margin: 0 auto 2.5rem;
+      color: var(--cream);
+      opacity: 0.95;
+    }
+
+    .ext-cta {
+      display: inline-flex;
       align-items: center;
-
-      cursor: pointer;
-      padding: 1rem;
-
-      border-radius: 5px;
-
-      --cast: 2px;
-      box-shadow: var(--cast) var(--cast) 0 var(--grey);
-      text-shadow: 0.5px 0.5px 0 rgba(0, 0, 0, 0.2);
-      transition: all 0.2s;
-
-      &:hover {
-        background-color: var(--light);
-        --cast: 4px;
-      }
-      &.active {
-        background: var(--purple);
-        color: var(--white);
-      }
+      gap: 0.6rem;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream);
+      text-decoration: none;
+      border-bottom: 1px solid var(--cream);
+      padding-bottom: 0.4rem;
+      transition: opacity 0.25s ease;
+      &:hover { opacity: 0.7; }
+      &::after { content: '→'; font-size: 1.4rem; letter-spacing: 0; }
     }
-    .tag ~ .tag {
-      margin-left: 2rem;
-    }
-    h5 {
-      margin: 0;
-    }
+  }
+
+  .divider {
+    width: 60px;
+    height: 1px;
+    background: var(--ink);
+    opacity: 0.25;
+    margin: 0 auto;
   }
 `
 
-// markup
 const BookingPage = () => {
-  const [practitioner, setPractitioner] = useState('')
-  const [url, setUrl] = useState('')
-
-  const handleClick = member => {
-    setPractitioner(member.name)
-    setUrl(member.booking)
-  }
-  if (typeof window !== 'undefined') {
-    window.addEventListener('message', function handleIFrameMessage(e) {
-      var clinikoBookings = document.getElementById('cliniko-9992835')
-      if (typeof e.data !== 'string') return
-      if (e.data.search('cliniko-bookings-resize') > -1) {
-        var height = Number(e.data.split(':')[1])
-        clinikoBookings.style.height = height + 'px'
-      }
-      e.data.search('cliniko-bookings-page') > -1 &&
-        clinikoBookings.scrollIntoView()
-    })
-  }
-
+  const east = LOCATIONS.eastPerth
+  const west = LOCATIONS.westPerth
   return (
-    <>
-      <main>
-        <SEO title="Booking"></SEO>
-        <title>Booking</title>
-        <PageHero title="Booking" />
-        <BookingStyles>
-          <div className="wrapper-column">
-            <h4>Booking with {practitioner ? practitioner : '...'}</h4>
-            <div className="name-tags">
-              {members.map(member => {
-                if(member.id===0) return (<></>)
-                return (
-                  <div
-                    className={
-                      practitioner === member.name ? `tag active` : 'tag'
-                    }
-                    onClick={() => handleClick(member)}
-                    key={member.id}
-                  >
-                    <h5>{member.name}</h5>
-                  </div>
-                )
-              })}
+    <main>
+      <SEO title="Booking" />
+      <PageHero title="Book your appointment" eyebrow="Schedule" />
+      <BookingStyles>
+        <div className="intro">
+          <p>
+            Monica practises across <em>two locations</em>. Pick the one that
+            suits you and book online below.
+          </p>
+        </div>
+
+        <section className="location-block" id="east-perth">
+          <div className="location-header">
+            <div className="eyebrow">Location One</div>
+            <h2>{east.name}</h2>
+            <div className="venue">{east.venue}</div>
+            <div className="address">
+              <a
+                href={east.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {east.address}
+              </a>
             </div>
-            {url ? (
-              <iframe
-                title="booking page"
-                id="cliniko-9992835"
-                src={`${url}&embedded=true`}
-                frameBorder="0"
-                scrolling="auto"
-                width="100%"
-                height="1000"
-                style={{ pointerEvents: 'auto' }}
-              ></iframe>
-            ) : (
-              ''
-            )}
+            <div className="hours">Mon · Tue · Fri (PM)</div>
           </div>
-        </BookingStyles>
-        {}
-      </main>
-    </>
+
+          <div className="iframe-wrap">
+            <iframe
+              title="East Perth booking"
+              id="acuity-booking-east"
+              src={east.bookingUrl}
+              scrolling="auto"
+              height="1000"
+              style={{ pointerEvents: 'auto' }}
+            />
+          </div>
+        </section>
+
+        <div className="divider" />
+
+        <section className="location-block" id="west-perth">
+          <div className="location-header">
+            <div className="eyebrow">Location Two</div>
+            <h2>{west.name}</h2>
+            <div className="venue">{west.venue}</div>
+            <div className="hours">Wed · Thu · Fri (AM)</div>
+          </div>
+
+          <div className="iframe-wrap">
+            <iframe
+              title="West Perth booking"
+              id="acuity-booking-west"
+              src={west.bookingUrl}
+              scrolling="auto"
+              height="1000"
+              style={{ pointerEvents: 'auto' }}
+            />
+          </div>
+        </section>
+      </BookingStyles>
+    </main>
   )
 }
 
 export default BookingPage
-
-/* BOOKING iframe
-<iframe
-  id="cliniko-9992835"
-  src="https://perthhealthcare.au1.cliniko.com/bookings?practitioner_id=159109&embedded=true"
-  frameborder="0"
-  scrolling="auto"
-  width="100%"
-  height="1000"
-  style={{ pointerEvents: 'auto' }}
-></iframe>
-{window.addEventListener('message', function handleIFrameMessage(e) {
-  var clinikoBookings = document.getElementById('cliniko-9992835')
-  if (typeof e.data !== 'string') return
-  if (e.data.search('cliniko-bookings-resize') > -1) {
-    var height = Number(e.data.split(':')[1])
-    clinikoBookings.style.height = height + 'px'
-  }
-  e.data.search('cliniko-bookings-page') > -1 &&
-    clinikoBookings.scrollIntoView()
-})}
-*/

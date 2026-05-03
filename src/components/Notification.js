@@ -4,35 +4,59 @@ import { note } from '../data/utility'
 
 const NotificationStyles = styled.div`
   position: absolute;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 0.85rem 4rem 0.85rem 1.5rem;
   z-index: 101;
   top: 0;
   left: 0;
   right: 0;
-  background: var(--success);
+  background: var(--ink);
+  color: var(--cream);
   text-align: center;
 
   overflow: hidden;
-  box-shadow: 0 0 5px black;
 
   transform: ${props => `translateY(-${props.height}px)`};
   animation: slideDown 1.5s 1.0s 1 ease forwards;
 
-  .close{
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 
+  a {
+    color: var(--cream);
+    text-decoration-color: var(--sage-light);
+    margin-left: 1rem;
   }
-  @media (max-width: 640px) {
-    padding-right: 2rem;
+
+  .close {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    &:hover { opacity: 1; }
   }
-  h5{
+
+  h5 {
     margin: 0;
     padding: 0;
+    color: var(--cream);
+    font-family: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    display: inline;
   }
-}
+
+  @media (max-width: 640px) {
+    padding-right: 3rem;
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+  }
+
   @keyframes slideDown {
     0% {
       ${props => `translateY(-${props.height}px);`}
