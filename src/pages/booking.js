@@ -182,16 +182,33 @@ const BookingPage = () => {
             <div className="hours">Wed · Thu · Fri (AM)</div>
           </div>
 
-          <div className="iframe-wrap">
-            <iframe
-              title="West Perth booking"
-              id="acuity-booking-west"
-              src={west.bookingUrl}
-              scrolling="auto"
-              height="1000"
-              style={{ pointerEvents: 'auto' }}
-            />
-          </div>
+          {west.bookingType === 'iframe' ? (
+            <div className="iframe-wrap">
+              <iframe
+                title="West Perth booking"
+                id="acuity-booking-west"
+                src={west.bookingUrl}
+                scrolling="auto"
+                height="1000"
+                style={{ pointerEvents: 'auto' }}
+              />
+            </div>
+          ) : (
+            <div className="external-card">
+              <p>
+                Bookings for West Perth are managed by {west.venue} on their
+                own site.
+              </p>
+              <a
+                className="ext-cta"
+                href={west.bookingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book at {west.venue}
+              </a>
+            </div>
+          )}
         </section>
       </BookingStyles>
     </main>

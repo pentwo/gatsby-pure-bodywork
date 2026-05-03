@@ -34,7 +34,7 @@ export const LOCATIONS = {
         venue: "West Perth Chiropractic",
         address: "West Perth WA",
         bookingUrl: "https://www.westperthchiro.com.au/book-online/",
-        bookingType: "iframe",
+        bookingType: "external",
         mapsUrl: "https://www.westperthchiro.com.au/",
         mapsEmbed:
             "https://www.google.com/maps?q=West+Perth+Chiropractic&output=embed",
