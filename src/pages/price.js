@@ -82,16 +82,18 @@ const PriceList = styled.section`
 
     .time {
       font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.7rem;
-      color: var(--ink-soft);
+      font-weight: 500;
+      font-size: 1.9rem;
+      color: var(--ink);
     }
 
     .price {
-      font-family: 'Italiana', serif;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
       font-size: 2rem;
       color: var(--ink);
       letter-spacing: 0.04em;
+      font-feature-settings: 'lnum', 'tnum';
     }
   }
 `
@@ -155,9 +157,9 @@ const AddOnSection = styled.section`
 
     .name {
       font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.7rem;
-      color: var(--ink-soft);
+      font-weight: 500;
+      font-size: 1.9rem;
+      color: var(--ink);
     }
 
     .meta {
@@ -174,9 +176,12 @@ const AddOnSection = styled.section`
       }
 
       .price {
-        font-family: 'Italiana', serif;
-        font-size: 1.8rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 500;
+        font-size: 2rem;
         color: var(--ink);
+        letter-spacing: 0.04em;
+        font-feature-settings: 'lnum', 'tnum';
       }
     }
   }
