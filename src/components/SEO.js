@@ -23,7 +23,7 @@ export default function SEO({ children, location, description, title, image }) {
       {/* Google Font */}
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Poppins&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Italiana&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500&display=swap"
         rel="stylesheet"
       />
 

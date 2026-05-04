@@ -6,18 +6,24 @@ import { Link } from 'gatsby'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 import Nav from './Nav'
-import logo from '../images/logo.png'
+import logo from '../images/v2/logo.jpg'
 import Notification from './Notification'
 import { note } from '../data/utility'
 
 const HeaderStyles = styled.header`
-  padding: 2rem 0 0 0;
-  background: var(--white);
+  padding: 1.5rem 0 0 0;
+  background: var(--cream);
+  border-bottom: 1px solid rgba(31, 31, 31, 0.08);
   width: 100%;
   position: fixed;
   z-index: 999;
 
-  transition: all 0.4s linear;
+  transition: padding 0.4s ease;
+
+  &.active {
+    padding-top: 0.75rem;
+    box-shadow: 0 1px 0 rgba(31, 31, 31, 0.06);
+  }
 
   .wrapper {
     max-width: 100%;
@@ -33,21 +39,22 @@ const HeaderStyles = styled.header`
 
     justify-content: center;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     img {
-      width: 150px;
-      transition: all 0.4s linear;
+      width: 110px;
+      transition: width 0.4s ease;
+      mix-blend-mode: multiply;
     }
     position: relative;
 
     &.active {
       img {
-        width: 64px;
+        width: 56px;
       }
     }
     @media (max-width: 640px) {
       img {
-        width: 96px;
+        width: 80px;
         margin: 0;
       }
     }
@@ -55,11 +62,19 @@ const HeaderStyles = styled.header`
 
   .social-icons {
     position: absolute;
-    top: 2rem;
-    left: 2rem;
+    top: 0.5rem;
+    left: 2.5rem;
+    display: flex;
+    align-items: center;
     svg {
-      width: 36px;
-      height: 36px;
+      width: 18px;
+      height: 18px;
+      color: var(--sage);
+      opacity: 0.75;
+      transition: opacity 0.2s ease;
+    }
+    a:hover svg {
+      opacity: 1;
     }
     a ~ a {
       margin-left: 1rem;
@@ -68,9 +83,10 @@ const HeaderStyles = styled.header`
 
   @media (max-width: 640px) {
     .social-icons {
+      left: 1.5rem;
       svg {
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
       }
     }
   }

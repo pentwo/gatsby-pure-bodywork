@@ -3,6 +3,39 @@ import femaleAvatar from '../images/icons/icons8-circled-user-female-skin-type-3
 
 export const testimoniesData = [
   {
+    id: 7,
+    name: 'Catrina YU',
+    avatar: femaleAvatar,
+    source: 'Google Reviews',
+    rating: 5,
+    comment:
+      'Highly recommend Monica! She is very skilled, professional, and caring. I visit her every month and she always helps relieve my tension, especially in my shoulders and neck.',
+    shortComment:
+      'Highly recommend Monica! She is very skilled, professional, and caring.',
+  },
+  {
+    id: 8,
+    name: 'Jerwin Alcantara',
+    avatar: maleAvatar,
+    source: 'Google Reviews',
+    rating: 5,
+    comment:
+      'The best healthcare centre I have ever been in Perth. Been their client for over 3 years now. From chiropractors, to physio and my most favorite, their remedial massage. Look for Monica, A1!',
+    shortComment:
+      'The best healthcare centre I have ever been in Perth. Look for Monica, A1!',
+  },
+  {
+    id: 9,
+    name: 'Cliff',
+    avatar: maleAvatar,
+    source: 'Google Reviews',
+    rating: 5,
+    comment:
+      'Monica is an absolutely wonderful massage therapist, caring, knowledgeable, sensitive to customer needs, and brilliant at locating and treating muscle problems. In conjunction with a new physio program, her massages have helped me overcome long-term back and shoulder pain. I recommend her without hesitation to any prospective client.',
+    shortComment:
+      'Monica is an absolutely wonderful massage therapist, caring, knowledgeable, sensitive to customer needs.',
+  },
+  {
     id: 1,
     name: 'John Searle',
     avatar: maleAvatar,

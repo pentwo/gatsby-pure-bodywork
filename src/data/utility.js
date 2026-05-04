@@ -7,15 +7,58 @@ export const note = {
     link: "https://www.facebook.com/purebodywork.au/photos/a.2224374394508748/2957156024563911/",
 };
 
-export const BOOKING_URL =
-    "https://app.acuityscheduling.com/schedule/fbf64d5a";
+export const CONTACT_EMAIL = "purebodywork.wellness@gmail.com";
+
+export const CONTACT_PHONE = {
+    display: "0499 088 800",
+    tel: "+61499088800",
+    whatsapp: "https://wa.me/61499088800",
+};
+
+// Two practice locations — Monica works at both
+export const LOCATIONS = {
+    eastPerth: {
+        key: "eastPerth",
+        name: "East Perth",
+        venue: "Urban Om Yoga",
+        address: "42 Bennett Street, East Perth WA 6004",
+        bookingUrl: "https://sacredflowtouch.as.me/monica",
+        bookingType: "iframe",
+        mapsUrl: "https://maps.app.goo.gl/bzrsTjy7vfcYTny96",
+        mapsEmbed:
+            "https://www.google.com/maps?q=42+Bennett+Street+East+Perth+WA+6004&output=embed",
+    },
+    westPerth: {
+        key: "westPerth",
+        name: "West Perth",
+        venue: "West Perth Chiropractic",
+        address: "West Perth WA",
+        bookingUrl: "https://www.westperthchiro.com.au/book-online/",
+        bookingType: "external",
+        mapsUrl: "https://www.westperthchiro.com.au/",
+        mapsEmbed:
+            "https://www.google.com/maps?q=West+Perth+Chiropractic&output=embed",
+    },
+};
+
+// Primary booking URL — kept for backward compatibility (East Perth)
+export const BOOKING_URL = LOCATIONS.eastPerth.bookingUrl;
 
 export const businessHour = [
-    { day: "Monday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
-    { day: "Tuesday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
-    { day: "Friday", hour: "10:00 - 16:00", note: "(Urban OM Yoga Studio, East Perth)" },
-    { day: "Alternate Weekends", hour: "By appointment", note: "(Urban OM Yoga Studio, East Perth)" },
-    { day: "Public Holiday", hour: "Close" },
+    { id: "mon", day: "Monday", hour: "9:00am – 3:00pm", note: "East Perth" },
+    { id: "tue", day: "Tuesday", hour: "9:00am – 5:00pm", note: "East Perth" },
+    { id: "wed", day: "Wednesday", hour: "3:00pm – 6:00pm", note: "West Perth" },
+    { id: "thu", day: "Thursday", hour: "9:20am – 2:00pm", note: "West Perth" },
+    { id: "fri-am", day: "Friday", hour: "9:20am – 2:00pm", note: "West Perth" },
+    { id: "fri-pm", day: "Friday", hour: "3:00pm – 6:00pm", note: "East Perth" },
+    {
+        id: "weekend",
+        day: "Weekend",
+        hour: "4:00pm – 6:30pm",
+        note: "Alternate weekends · East / West Perth",
+    },
+    { id: "ph", day: "Public Holiday", hour: "Closed" },
+    { id: "appt", day: "By appointment only", hour: "" },
 ];
 
 export const members = [
@@ -27,7 +70,7 @@ export const members = [
             "I am passionate about helping others to improve their well-being by offering relaxing and rejuvenating treatments that nurture the self and lead to long term health solutions.",
         fullDescription:
             "<p>Monica's career in massage began in 2008,  she is enthusiastic and passionate about all things massage therapy.</p><p>Having studied vastly in the field, her amazing hands-on massage techniques combined with her Chinese Medicine understanding of the body makes her a Remedial Massage Therapist you can trust.</p><p>She has expertise in remedial massage, deep tissue massage, pregnancy massage, trigger point therapy, swedish massage, cupping and beauty therapy.</p><h5>Qualification Details</h5><ul><li>Massage association of Austalia</li><li>Diploma of Remedial Massage</li><li>Reiki First degree</li><li>Tibatan Singing bowl sounds therapy Level One & Two</li><li>NAHA Certified Professional Aromatherapist Level 2</li><li>First aid – Level 2</li></ul>",
-        booking: "https://app.acuityscheduling.com/schedule/fbf64d5a",
+        booking: BOOKING_URL,
     },
     // {
     //   id: 164714,

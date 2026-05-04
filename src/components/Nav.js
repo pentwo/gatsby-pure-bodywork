@@ -8,18 +8,18 @@ import { HiClipboardList } from 'react-icons/hi'
 import { ImPriceTag } from 'react-icons/im'
 import { RiContactsBook2Fill } from 'react-icons/ri'
 
-import { BOOKING_URL } from '../data/utility'
+import { CONTACT_PHONE } from '../data/utility'
 
 const NavStyles = styled.nav`
-  padding: 0.25rem 3rem;
+  padding: 0.25rem 3rem 1rem;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 'nav contact';
-  background-color: var(--grey);
+  background-color: transparent;
   .nav-options {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
 
     margin: 0;
     padding: 0;
@@ -34,6 +34,7 @@ const NavStyles = styled.nav`
       grid-area: contact;
       grid-template-columns: repeat(2, auto);
       justify-self: end;
+      align-items: center;
     }
   }
 
@@ -44,41 +45,39 @@ const NavStyles = styled.nav`
   }
 
   .nav a {
-    font-size: 1.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.22em;
+    color: var(--ink);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.5;
-    transition: all 0.2s ease-in-out;
+    transition: opacity 0.2s ease;
     position: relative;
     display: block;
-    &:before,
+    padding-bottom: 0.4rem;
+
     &:after {
       content: '';
       position: absolute;
       left: 0;
-      bottom: -5px;
-      width: 0px;
-      height: 5px;
-
-      transition: all 0.5s ease-in-out;
-
-      opacity: 0;
-      background-color: var(--purple);
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: var(--ink);
+      transition: width 0.3s ease;
     }
     &:hover {
       cursor: pointer;
-
-      &:before,
-      &:after {
-        width: 100%;
-        opacity: 1;
-      }
+      &:after { width: 100%; }
     }
   }
   .contact a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.18em;
+    color: var(--ink);
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 0.5;
   }
 
   /* Menu Button */
@@ -177,7 +176,7 @@ const Nav = () => {
         }
       >
         <li className="option">
-          <a href="tel:+61892211188">(08) 9221 1188</a>
+          <a href={`tel:${CONTACT_PHONE.tel}`}>{CONTACT_PHONE.display}</a>
         </li>
         <li className="option" onClick={closeMobileMenu}>
           <Link to="/booking">

@@ -2,26 +2,37 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --primary: #c4b5a5;
-    --dark: #6b5e52;
-    --light: #f2ece6;
-    --purple: #b8a99a;
+    /* Editorial palette — cream + sage (kerriwebbrmt-inspired) */
+    --cream: #f2eee5;
+    --cream-soft: #ebe6da;
+    --sage: #7c8676;
+    --sage-light: #a2ab97;
+    --sage-soft: #c7cdbf;
+    --ink: #1f1f1f;
+    --ink-soft: #2c2a28;
+    --muted: #6b6660;
 
-    --primary-opacity: #c4b5a5BF;
-    --light-opacity: #f2ece6BF;
-    --purple-opacity: #b8a99aBF;
+    /* Legacy aliases — kept for backward compatibility */
+    --primary: var(--sage);
+    --dark: var(--ink);
+    --light: var(--sage-soft);
+    --purple: var(--sage);
 
-    --warning: #dcc8b8;
-    --success: #c2cdb5;
-    --error: #d4b0a8;
-    --black: #2c2722;
-    --white: #faf8f5;
-    --grey: #e8e2dc;
+    --primary-opacity: #7c8676BF;
+    --light-opacity: #c7cdbfBF;
+    --purple-opacity: #7c8676BF;
+
+    --warning: #c8a99f;
+    --success: #aac89f;
+    --error: #c89fbe;
+    --black: var(--ink);
+    --white: var(--cream);
+    --grey: #ded8d7;
 
     --smScreen: '640px';
 
-    --gradient-primary: rgba(225, 225, 225, 0.7);
-    --gradient-secondary: rgba(225, 225, 225, 0.5);
+    --gradient-primary: rgba(242, 238, 229, 0.7);
+    --gradient-secondary: rgba(242, 238, 229, 0.5);
 
     --hero-padding-top: 25rem;
     --hero-mobile-padding-top: 13.5rem;
@@ -45,19 +56,39 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: var(--purple);
-    color: var(--white);
-    border: 0;
-    padding: 0.6rem 1rem;
-    border-radius: 4px;
+    background: transparent;
+    color: var(--ink);
+    border: 1px solid var(--ink);
+    padding: 0.9rem 1.6rem;
+    border-radius: 0;
     cursor: pointer;
-    --cast: 2px;
-    box-shadow: var(--cast) var(--cast) 0 var(--grey);
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
-    transition: all 0.2s;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: background 0.25s ease, color 0.25s ease;
     &:hover {
-      --cast: 4px;
+      background: var(--ink);
+      color: var(--cream);
     }
+  }
+
+  /* Editorial link-style CTA — text + arrow, no box */
+  .link-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 0.3rem;
+    transition: opacity 0.25s ease;
+    &:hover { opacity: 0.65; }
+    &::after { content: '→'; font-size: 1.4rem; letter-spacing: 0; }
   }
 
 
