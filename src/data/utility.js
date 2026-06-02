@@ -33,7 +33,7 @@ export const LOCATIONS = {
         name: "West Perth",
         venue: "West Perth Chiropractic",
         address: "West Perth WA",
-        bookingUrl: "https://www.westperthchiro.com.au/book-online/",
+        bookingUrl: "https://healthengine.com.au/massage-therapist/wa/west-perth/ms-monica-li/p144213",
         bookingType: "external",
         mapsUrl: "https://www.westperthchiro.com.au/",
         mapsEmbed:
@@ -67,9 +67,9 @@ export const members = [
         name: "Monica Li",
         avatarImage: monicaAvatar,
         description:
-            "I am passionate about helping others to improve their well-being by offering relaxing and rejuvenating treatments that nurture the self and lead to long term health solutions.",
+            "Hi, I'm Monica. Originally from Taiwan, I'm a bodyworker based in Perth, Australia with over 15 years of experience, and also a mother of three.",
         fullDescription:
-            "<p>Monica's career in massage began in 2008,  she is enthusiastic and passionate about all things massage therapy.</p><p>Having studied vastly in the field, her amazing hands-on massage techniques combined with her Chinese Medicine understanding of the body makes her a Remedial Massage Therapist you can trust.</p><p>She has expertise in remedial massage, deep tissue massage, pregnancy massage, trigger point therapy, swedish massage, cupping and beauty therapy.</p><h5>Qualification Details</h5><ul><li>Massage association of Austalia</li><li>Diploma of Remedial Massage</li><li>Reiki First degree</li><li>Tibatan Singing bowl sounds therapy Level One & Two</li><li>NAHA Certified Professional Aromatherapist Level 2</li><li>First aid – Level 2</li></ul>",
+            "<p>My sessions integrate remedial massage, pregnancy massage, Reiki, Tibetan Singing Bowl Therapy, aromatherapy, and nervous system support. I believe healing is not always about changing ourselves, but about finally slowing down enough to listen to the feelings and inner voices that have been ignored for too long.</p><p>Since beginning my journey in massage and bodywork in 2008, I've combined clinical massage techniques with a holistic and intuitive approach to healing. My intention is to create a space where people can slow down amidst the stress and busyness of life, and reconnect with their bodies and inner selves.</p><p>My Reiki training was guided by two different Reiki Masters, while my journey with Tibetan Singing Bowls began in Bali in 2017 and continued with further studies in Melbourne in 2022. Each teacher brought different philosophies and perspectives, deepening my understanding of vibrational healing, energetic presence, chakras, and the connection between the body and nervous system.</p><p>Outside of work, I love travel, books, films, music, and philosophy. I'm endlessly curious about people, cultures, and the human experience. I believe curiosity and open-mindedness often bring us closer to truth than rushing to define or judge things too quickly.</p><p>In the space I create for you, you're allowed to put down all the roles and identities you carry, and return to what you truly feel beneath them.</p><p><em>To let the body soften.</em></p><p> <em>To let the inner voice finally be heard.</em></p><p><em>Whether it feels gentle, messy, angry, or sad — everything is welcome here.</em></p><p><em>I'm not here to rush your healing, or to change who you are.</em></p><p> What I hope to offer is a space where you can reconnect with yourself, and slowly meet the parts of you that may have never truly felt seen, understood, or held.</p><p><em>I believe we come to this Earth borrowing this body for a period of time — to experience, to learn, to feel, to love, and to grow.</em></p><p><em> And when it is finally time for us to leave, we gently return it back to the Earth.</em></p><h5>Qualifications</h5><ul><li>Massage Association of Australia</li><li>Diploma of Remedial Massage</li><li>Reiki First Degree</li><li>Tibetan Singing Bowl Therapy Level One & Two</li><li>NAHA Certified Professional Aromatherapist Level 2</li><li>First Aid – Level 2</li></ul>",
         booking: BOOKING_URL,
     },
     // {
